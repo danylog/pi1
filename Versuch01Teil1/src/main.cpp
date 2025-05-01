@@ -72,8 +72,15 @@ int main(){
 
 	const int iZweite = 1;
 
-	std::cout << iZweite;
+	std::cout<< "konstanter wert" << iZweite;
 
+	//ASCII wert
+
+	int iName1 = sVorname[0];
+	int iName2 = sVorname[1];
+
+	std::cout << "Erste Buchstabe (ASCII): " << iName1<< std::endl;
+	std::cout << "Zweite Buchstabe (ASCII): " << iName2 << std::endl;
 
 
 
