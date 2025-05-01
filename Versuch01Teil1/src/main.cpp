@@ -82,6 +82,10 @@ int main(){
 	std::cout << "Erste Buchstabe (ASCII): " << iName1<< std::endl;
 	std::cout << "Zweite Buchstabe (ASCII): " << iName2 << std::endl;
 
+	//Deutsches Alphabet Zustand
+
+	std::cout << "Erste Buchstabe im Alphabet: " << ((iName1-97)>0 ? iName1-97 : iName1-65) <<std::endl;
+	std::cout << "Zweite Buchstabe im Alphabet: " <<((iName2-97)>=0 ? iName2-97 : iName2-65) <<std::endl;
 
 
 }
