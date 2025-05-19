@@ -100,3 +100,35 @@ void Liste::ausgabeRuckwaerts() const
         cursor = cursor->getPrev();
     }
 }
+bool Liste::studentenLoeschen(int matrikelnummer)
+{
+    ListenElement *cursor = front;
+    while (cursor != nullptr)
+    {
+        if (cursor->getData().getMatNr() == matrikelnummer)
+        {
+            // Element ist vorne
+            if (cursor == front)
+            {
+                popFront();
+            }
+            // Element ist hinten
+            else if (cursor == back)
+            {
+                back = back->getPrev();
+                back->setNext(nullptr);
+                delete cursor;
+            }
+            // Element ist in der Mitte
+            else
+            {
+                cursor->getPrev()->setNext(cursor->getNext());
+                cursor->getNext()->setPrev(cursor->getPrev());
+                delete cursor;
+            }
+            return true;
+        }
+        cursor = cursor->getNext();
+    }
+    return false;
+}

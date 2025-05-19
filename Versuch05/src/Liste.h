@@ -24,6 +24,7 @@ public:
     Student dataFront();
     void ausgabeVorwaerts() const;
     void ausgabeRuckwaerts() const;
+    bool studentenLoeschen(int matrikelnummer);
 };
 
 #endif /*LISTE_H_*/

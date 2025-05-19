@@ -43,6 +43,7 @@ int main()
                   << "(2): Datenelement vorne entfernen" << std::endl
                   << "(3): Datenbank ausgeben" << std::endl
                   << "(4): Datenbank im umgekehrter Reigenfolge ausgeben" << std::endl
+                  << "(6): Datenelement loeschen" << std::endl
                   << "(0): Beenden" << std::endl;
         std::cin >> abfrage;
         std::cin.ignore(10, '\n');
@@ -117,6 +118,28 @@ int main()
                 std::cout << "Die Liste ist leer!\n\n";
             }
             break;
+        case '6':
+        {
+            if (!studentenListe.empty())
+            {
+                int matrikelnummer;
+                std::cout << "Geben Sie den Matrikelnummer der Student an:" << std::endl;
+                std::cin >> matrikelnummer;
+                if (studentenListe.studentenLoeschen(matrikelnummer))
+                {
+                    std::cout << "Student mit Matrikelnummer " << matrikelnummer << " wurde entfernt.\n";
+                }
+                else
+                {
+                    std::cout << "Kein Student mit dieser Matrikelnummer gefunden.\n";
+                }
+            }
+            else
+            {
+                std::cout << "Die Liste ist leer!\n";
+            }
+            break;
+        }
         case '0':
             std::cout << "Das Programm wird nun beendet";
             break;
