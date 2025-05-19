@@ -7,7 +7,7 @@
 /**
  * @brief Standardkonstruktor, der eine leere Liste erstellt
  */
-Liste::Liste(): front(nullptr), back(nullptr)
+Liste::Liste() : front(nullptr), back(nullptr)
 {
 }
 
@@ -19,16 +19,16 @@ Liste::Liste(): front(nullptr), back(nullptr)
  */
 void Liste::pushBack(Student pData)
 {
-    ListenElement* neuesElement = new ListenElement(pData, nullptr);
+    ListenElement *neuesElement = new ListenElement(pData, nullptr, back);
 
-    if (front == nullptr)                                       // Liste leer?
+    if (empty()) // Liste leer?
     {
-        front = neuesElement;
-        back = neuesElement;
+        front = back = neuesElement; // Zeiger auf erstes Element setzen
     }
     else
     {
         back->setNext(neuesElement);
+        back->setPrev(back);
         back = neuesElement;
     }
 }
@@ -40,18 +40,15 @@ void Liste::pushBack(Student pData)
  */
 void Liste::popFront()
 {
-    ListenElement* cursor = front;
-
-    if (front == back)                                       // Liste enthält nur ein Listenelement
+    if (!empty())
     {
-        delete front;                                        // Listenelement löschen
-        front = nullptr;
-        back = nullptr;
-    }
-    else
-    {
+        ListenElement *temp = front;
         front = front->getNext();
-        delete cursor;
+        if (front)
+            front->setPrev(nullptr);
+        else
+            back = nullptr;
+        delete temp;
     }
 }
 
@@ -62,7 +59,7 @@ void Liste::popFront()
  */
 bool Liste::empty()
 {
-    if(front == nullptr)
+    if (front == nullptr)
     {
         return true;
     }
@@ -86,11 +83,11 @@ Student Liste::dataFront()
  */
 void Liste::ausgabeVorwaerts() const
 {
-    ListenElement* cursor = front;
+    ListenElement *cursor = front;
 
     while (cursor != nullptr)
     {
-    	cursor->getData().ausgabe();
+        cursor->getData().ausgabe();
         cursor = cursor->getNext();
     }
 }

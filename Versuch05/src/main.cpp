@@ -31,7 +31,7 @@ int main()
         studentenListe.pushBack(student);
         student = Student(64567, "Paula Peters", "9.01.1981", "Weidenweg 12");
         studentenListe.pushBack(student);
-        student = Student(23456, "Walter Rodenstock", "15.10.1963", "Wüllnerstr.9");
+        student = Student(23456, "Walter Rodenstock", "15.10.1963", "Wuellnerstr.9");
         studentenListe.pushBack(student);
     }
 
@@ -48,73 +48,72 @@ int main()
 
         switch (abfrage)
         {
-            // Datenelement hinten hinzufuegen
-            case '1':
-                {
-                    unsigned int matNr = 0;
-                    std::string name = "";
-                    std::string geburtstag = "";
-                    std::string adresse = "";
+        // Datenelement hinten hinzufuegen
+        case '1':
+        {
+            unsigned int matNr = 0;
+            std::string name = "";
+            std::string geburtstag = "";
+            std::string adresse = "";
 
-                    std::cout << "Bitte geben sie die Daten für den Studenten ein.\nName: ";
-                    getline(std::cin, name);    // ganze Zeile einlesen inklusive aller Leerzeichen
+            std::cout << "Bitte geben sie die Daten fï¿½r den Studenten ein.\nName: ";
+            getline(std::cin, name); // ganze Zeile einlesen inklusive aller Leerzeichen
 
-                    std::cout << "Geburtsdatum: ";
-                    getline(std::cin, geburtstag);
+            std::cout << "Geburtsdatum: ";
+            getline(std::cin, geburtstag);
 
-                    std::cout << "Adresse: ";
-                    getline(std::cin, adresse);
+            std::cout << "Adresse: ";
+            getline(std::cin, adresse);
 
-                    std::cout << "Matrikelnummer: ";
-                    std::cin >> matNr;
-                    std::cin.ignore(10, '\n');
+            std::cout << "Matrikelnummer: ";
+            std::cin >> matNr;
+            std::cin.ignore(10, '\n');
 
-                    student = Student(matNr, name, geburtstag, adresse);
+            student = Student(matNr, name, geburtstag, adresse);
 
-                    studentenListe.pushBack(student);
-                }
-                break;
-
-            // Datenelement vorne entfernen
-            case '2':
-                {
-                    if(!studentenListe.empty())
-                    {
-                        student = studentenListe.dataFront();
-                        std::cout << "Der folgende Student ist geloescht worden:" << std::endl;
-                        student.ausgabe();
-                        studentenListe.popFront();
-                    }
-                    else
-                    {
-                        std::cout << "Die Liste ist leer!\n";
-                    }
-                }
-                break;
-
-            // Datenbank vorwaerts ausgeben
-            case '3':
-                if(!studentenListe.empty())
-                {
-                    std::cout << "Inhalt der Liste in fortlaufender Reihenfolge:" << std::endl;
-                    studentenListe.ausgabeVorwaerts();
-                }
-                else
-                {
-                    std::cout << "Die Liste ist leer!\n\n";
-                }
-                break;
-
-            case '0':
-                std::cout << "Das Programm wird nun beendet";
-                break;
-
-            default :
-                std::cout << "Falsche Eingabe, bitte nochmal";
-                break;
+            studentenListe.pushBack(student);
         }
-    }
-    while (abfrage != '0');
+        break;
+
+        // Datenelement vorne entfernen
+        case '2':
+        {
+            if (!studentenListe.empty())
+            {
+                student = studentenListe.dataFront();
+                std::cout << "Der folgende Student ist geloescht worden:" << std::endl;
+                student.ausgabe();
+                studentenListe.popFront();
+            }
+            else
+            {
+                std::cout << "Die Liste ist leer!\n";
+            }
+        }
+        break;
+
+        // Datenbank vorwaerts ausgeben
+        case '3':
+            if (!studentenListe.empty())
+            {
+                std::cout << "Inhalt der Liste in fortlaufender Reihenfolge:" << std::endl;
+                studentenListe.ausgabeVorwaerts();
+            }
+            else
+            {
+                std::cout << "Die Liste ist leer!\n\n";
+            }
+            break;
+
+        case '0':
+            std::cout << "Das Programm wird nun beendet";
+            break;
+
+        default:
+            std::cout << "Falsche Eingabe, bitte nochmal";
+            break;
+        }
+    } while (abfrage != '0');
 
     return 0;
 }

@@ -11,16 +11,19 @@ class ListenElement
 {
 private:
     Student data;
-    ListenElement* next;
+    ListenElement *next;
+    ListenElement *prev;
 
 public:
-    ListenElement(Student pData, ListenElement* pNext);
+    ListenElement(Student pData, ListenElement *pNext = nullptr, ListenElement *pPrev = nullptr);
 
+    ListenElement *getPrev() const { return prev; }
+    void setPrev(ListenElement *pPrev) { prev = pPrev; }
     void setData(Student pData);
-    void setNext(ListenElement* pNext);
+    void setNext(ListenElement *pNext);
 
     Student getData() const;
-    ListenElement* getNext() const;
+    ListenElement *getNext() const;
 };
 
 #endif
