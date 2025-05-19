@@ -28,7 +28,6 @@ void Liste::pushBack(Student pData)
     else
     {
         back->setNext(neuesElement);
-        back->setPrev(back);
         back = neuesElement;
     }
 }
@@ -89,5 +88,15 @@ void Liste::ausgabeVorwaerts() const
     {
         cursor->getData().ausgabe();
         cursor = cursor->getNext();
+    }
+}
+void Liste::ausgabeRuckwaerts() const
+{
+    ListenElement *cursor = back;
+
+    while (cursor != nullptr)
+    {
+        cursor->getData().ausgabe();
+        cursor = cursor->getPrev();
     }
 }

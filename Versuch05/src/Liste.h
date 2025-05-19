@@ -13,16 +13,17 @@
 class Liste
 {
 private:
-    ListenElement* front;                                         // Zeiger auf das erste Listenelement
-    ListenElement* back;                                         // Zeiger auf das letzte Listenelement
+    ListenElement *front; // Zeiger auf das erste Listenelement
+    ListenElement *back;  // Zeiger auf das letzte Listenelement
 
 public:
-    Liste();                                                     // Konstruktor mit Zeigerinitialisierung
+    Liste(); // Konstruktor mit Zeigerinitialisierung
     void pushBack(Student pData);
     void popFront();
     bool empty();
     Student dataFront();
     void ausgabeVorwaerts() const;
+    void ausgabeRuckwaerts() const;
 };
 
 #endif /*LISTE_H_*/

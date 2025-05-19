@@ -42,6 +42,7 @@ int main()
                   << "(1): Datenelement hinten hinzufuegen" << std::endl
                   << "(2): Datenelement vorne entfernen" << std::endl
                   << "(3): Datenbank ausgeben" << std::endl
+                  << "(4): Datenbank im umgekehrter Reigenfolge ausgeben" << std::endl
                   << "(0): Beenden" << std::endl;
         std::cin >> abfrage;
         std::cin.ignore(10, '\n');
@@ -105,6 +106,17 @@ int main()
             }
             break;
 
+        case '4':
+            if (!studentenListe.empty())
+            {
+                std::cout << "Inhalt der Liste in umgekehrter Reihenfolge:" << std::endl;
+                studentenListe.ausgabeRuckwaerts();
+            }
+            else
+            {
+                std::cout << "Die Liste ist leer!\n\n";
+            }
+            break;
         case '0':
             std::cout << "Das Programm wird nun beendet";
             break;
