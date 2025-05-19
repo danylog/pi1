@@ -32,6 +32,20 @@ void Liste::pushBack(Student pData)
     }
 }
 
+void Liste::pushFront(Student pData)
+{
+    ListenElement *neu = new ListenElement(pData, front, nullptr);
+    if (empty())
+    {
+        front = back = neu;
+    }
+    else
+    {
+        front->setPrev(neu);
+        front = neu;
+    }
+}
+
 /**
  * @brief Entfernen eines Listenelements am Anfang der Liste.
  *

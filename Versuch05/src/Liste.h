@@ -19,6 +19,7 @@ private:
 public:
     Liste(); // Konstruktor mit Zeigerinitialisierung
     void pushBack(Student pData);
+    void pushFront(Student pData);
     void popFront();
     bool empty();
     Student dataFront();

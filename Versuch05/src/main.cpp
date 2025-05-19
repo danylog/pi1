@@ -44,6 +44,7 @@ int main()
                   << "(3): Datenbank ausgeben" << std::endl
                   << "(4): Datenbank im umgekehrter Reigenfolge ausgeben" << std::endl
                   << "(6): Datenelement loeschen" << std::endl
+                  << "(7): Datenelement vorne hinzufuegen" << std::endl
                   << "(0): Beenden" << std::endl;
         std::cin >> abfrage;
         std::cin.ignore(10, '\n');
@@ -138,6 +139,31 @@ int main()
             {
                 std::cout << "Die Liste ist leer!\n";
             }
+            break;
+        }
+        case '7':
+        {
+            unsigned int matNr = 0;
+            std::string name = "";
+            std::string geburtstag = "";
+            std::string adresse = "";
+
+            std::cout << "Bitte geben sie die Daten fuer den Studenten ein.\nName: ";
+            getline(std::cin, name); // ganze Zeile einlesen inklusive aller Leerzeichen
+
+            std::cout << "Geburtsdatum: ";
+            getline(std::cin, geburtstag);
+
+            std::cout << "Adresse: ";
+            getline(std::cin, adresse);
+
+            std::cout << "Matrikelnummer: ";
+            std::cin >> matNr;
+            std::cin.ignore(10, '\n');
+
+            student = Student(matNr, name, geburtstag, adresse);
+
+            studentenListe.pushFront(student);
             break;
         }
         case '0':
