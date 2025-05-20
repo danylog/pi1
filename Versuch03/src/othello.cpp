@@ -221,25 +221,59 @@ bool zugGueltig(const int spielfeld[GROESSE_Y][GROESSE_X], const int aktuellerSp
 void zugAusfuehren(int spielfeld[GROESSE_Y][GROESSE_X], const int aktuellerSpieler, const int posX, const int posY)
 {
     int gegner = 3 - aktuellerSpieler;
+    spielfeld[posY][posX] = aktuellerSpieler; // Setze den Stein
 
     // Alle Richtungen bearbeiten
     for (int j = -1; j <= 1; j++)
     {
         for (int i = -1; i <= 1; i++)
         {
-            // aehnlich wie die Funktion zugGueltig(), aber stellen Sie sicher, das alle gegnerischen Steine in
-            // allen Richtungen in Ihre eigenen Steine umgewandelt werden
-            //
-            // Hier erfolgt jetzt Ihre Implementierung ...
+            if (i == 0 && j == 0)
+                continue; // keine Richtung
+
+            int x = posX + i;
+            int y = posY + j;
+
+            // Erstes Feld in Richtung muss Gegner sein
+            if (aufSpielfeld(x, y) && spielfeld[y][x] == gegner)
+            {
+                // Prüfe, ob in dieser Richtung eine Kette bis zum eigenen Stein existiert
+                int x2 = x + i;
+                int y2 = y + j;
+                while (aufSpielfeld(x2, y2) && spielfeld[y2][x2] == gegner)
+                {
+                    x2 += i;
+                    y2 += j;
+                }
+                if (aufSpielfeld(x2, y2) && spielfeld[y2][x2] == aktuellerSpieler)
+                {
+                    // Jetzt alle gegnerischen Steine in dieser Richtung umdrehen
+                    int x3 = posX + i;
+                    int y3 = posY + j;
+                    while (x3 != x2 || y3 != y2)
+                    {
+                        spielfeld[y3][x3] = aktuellerSpieler;
+                        x3 += i;
+                        y3 += j;
+                    }
+                }
+            }
         }
     }
 }
 
 int moeglicheZuege(const int spielfeld[GROESSE_Y][GROESSE_X], const int aktuellerSpieler)
 {
-    // Hier erfolgt jetzt Ihre Implementierung ...
-
-    return 0;
+    int count = 0;
+    for (int y = 0; y < GROESSE_Y; ++y)
+    {
+        for (int x = 0; x < GROESSE_X; ++x)
+        {
+            if (zugGueltig(spielfeld, aktuellerSpieler, x, y))
+                ++count;
+        }
+    }
+    return count;
 }
 
 bool menschlicherZug(int spielfeld[GROESSE_Y][GROESSE_X], const int aktuellerSpieler)
