@@ -1,7 +1,7 @@
 #include <iostream>
 
 
-// Rekursive Funktion zur Berechnung von Fibonacci-Zahlen
+/// Rekursive Funktion zur Berechnung von Fibonacci-Zahlen
 int fibonacci(int n) {
     if (n <= 1)
         return n;
