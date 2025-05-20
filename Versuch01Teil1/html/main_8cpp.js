@@ -4,6 +4,8 @@ var main_8cpp =
     [ "dQuotientCast", "main_8cpp.html#ad5a5df8c1150a4eb975ffe5ab6af724c", null ],
     [ "dSummeCast", "main_8cpp.html#a9de73b40f661135eb2a0fcff94bc808f", null ],
     [ "iErste", "main_8cpp.html#a51e705f1469fa1baef97001084ee5818", null ],
+    [ "iFeld", "main_8cpp.html#a0be937f83867ddf5bae19c0723b22c5e", null ],
+    [ "iFeldB", "main_8cpp.html#ac1aede66640e339bf07845a02974c318", null ],
     [ "iQuotient", "main_8cpp.html#af6b6954f19f9a9659c8c14d4cc4e7026", null ],
     [ "iSumme", "main_8cpp.html#a5c5e93fcafa19f9a42414fdf13342da4", null ],
     [ "iZweite", "main_8cpp.html#aa54edea2c6d6ad1df80865e90a412a45", null ],
