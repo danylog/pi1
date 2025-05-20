@@ -7,21 +7,26 @@
 
 int main()
 {
+	/// \brief hard-coded konstante:
     const double erdRadius = 6371000.0;                      // Meter
     const double plattformHoehe = 555.7;                     // Meter
     const double koerperHoehe = 1.7;                         // Meter
     const double sichtHoehe = plattformHoehe + koerperHoehe; // Meter
-
-    Vektor erdMittelpunkt(0, 0, 0);
-    Vektor aussichtsPunkt(0, 0, erdRadius + sichtHoehe);
-
     double schrittweite = 0.1; // Meter
+
+
+    /// \brief helfer-variablen
     double x = 0.0;
     double z = erdRadius;
     int schritte = 0;
 
+
+    /// \brief vektoren erstellen
+    Vektor erdMittelpunkt(0, 0, 0);
+    Vektor aussichtsPunkt(0, 0, erdRadius + sichtHoehe);
     Vektor sicht(0, 0, 0);
     Vektor punktAufErde(0, 0, 0);
+
 
     while (x < erdRadius)
     {
@@ -39,6 +44,7 @@ int main()
 
         x += schrittweite;
     }
+
 
     double distanz = sicht.laenge() / 1000.0;
 
