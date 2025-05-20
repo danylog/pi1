@@ -1,6 +1,6 @@
 /**
- * Praktikum Informatik 1 
- * 
+ * Praktikum Informatik 1
+ *
  *
  * @file main.cpp
  *
@@ -8,18 +8,17 @@
  */
 
 /**
-* @mainpage Othello
-*
-* Dokumentation des Spiels Othello im Rahmen des Praktikums Informatik 1.
-*
-*/
+ * @mainpage Othello
+ *
+ * Dokumentation des Spiels Othello im Rahmen des Praktikums Informatik 1.
+ *
+ */
 
 #include <iostream>
 #include <string>
 #include "config.h"
 #include "test.h"
 #include "othelloKI.h"
-
 
 /**
  * @brief Funktion zur ersten Initialisierung eines neuen Spielfelds
@@ -31,41 +30,39 @@
 void initialisiereSpielfeld(int spielfeld[GROESSE_Y][GROESSE_X])
 {
     for (int j = 0; j < GROESSE_Y; j++)
+    {
+        for (int i = 0; i < GROESSE_X; i++)
         {
-            for(int i = 0; i < GROESSE_X; i++)
-            {
-                spielfeld[j][i] = 0;
-            }
+            spielfeld[j][i] = 0;
         }
-        spielfeld[GROESSE_Y / 2 - 1][GROESSE_X / 2 - 1] = 1;
-        spielfeld[GROESSE_Y / 2][GROESSE_X / 2 - 1] = 2;
-        spielfeld[GROESSE_Y / 2 - 1][GROESSE_X / 2] = 2;
-        spielfeld[GROESSE_Y / 2][GROESSE_X / 2] = 1;
+    }
+    spielfeld[GROESSE_Y / 2 - 1][GROESSE_X / 2 - 1] = 1;
+    spielfeld[GROESSE_Y / 2][GROESSE_X / 2 - 1] = 2;
+    spielfeld[GROESSE_Y / 2 - 1][GROESSE_X / 2] = 2;
+    spielfeld[GROESSE_Y / 2][GROESSE_X / 2] = 1;
 }
 
-
-
 /**
-* @brief Ausgabe des Spielfelds auf der Konsole
-*
-* Ausgabe des aktuellen Spielfelds, 0 bedeutet leeres Feld, 1 ist Spieler 1 und 2 ist Spieler2
-* Kreuze symbolisieren Spieler 1, waehrend Kreise Spieler 2 symbolisieren
-*
-*  @param spielfeld  Spielfeld, das ausgeben wird
-*/
+ * @brief Ausgabe des Spielfelds auf der Konsole
+ *
+ * Ausgabe des aktuellen Spielfelds, 0 bedeutet leeres Feld, 1 ist Spieler 1 und 2 ist Spieler2
+ * Kreuze symbolisieren Spieler 1, waehrend Kreise Spieler 2 symbolisieren
+ *
+ *  @param spielfeld  Spielfeld, das ausgeben wird
+ */
 void zeigeSpielfeld(const int spielfeld[GROESSE_Y][GROESSE_X])
 {
     std::cout << "   | ";
 
-    //Start bei ASCII 65 = A
+    // Start bei ASCII 65 = A
     for (int i = 65; i < 65 + GROESSE_X; ++i)
-        std::cout << ((char) i) << " | " ;
+        std::cout << ((char)i) << " | ";
 
     std::cout << std::endl;
 
     for (int j = 0; j < GROESSE_Y; ++j)
     {
-        for(int i = 0; i < GROESSE_X; ++i)
+        for (int i = 0; i < GROESSE_X; ++i)
         {
             std::cout << "---+";
         }
@@ -76,25 +73,25 @@ void zeigeSpielfeld(const int spielfeld[GROESSE_Y][GROESSE_X])
         {
             switch (spielfeld[j][i])
             {
-                case 0:
-                    std::cout << "   " ;
-                    break;
-                case 1:
-                    std::cout << " X ";
-                    break;
-                case 2:
-                    std::cout << " O ";
-                    break;
-                default:
-                    std::cout << "Unzulaessige Daten im Spielfeld!" << std::endl;
-                    std::cout << "Abbruch .... " << std::endl;
-                    exit(0);
-                    break;
+            case 0:
+                std::cout << "   ";
+                break;
+            case 1:
+                std::cout << " X ";
+                break;
+            case 2:
+                std::cout << " O ";
+                break;
+            default:
+                std::cout << "Unzulaessige Daten im Spielfeld!" << std::endl;
+                std::cout << "Abbruch .... " << std::endl;
+                exit(0);
+                break;
             }
             std::cout << "|";
-        };  //for i
-        std::cout <<  std::endl;
-    }  //for j
+        }; // for i
+        std::cout << std::endl;
+    } // for j
 }
 
 /**
@@ -122,7 +119,6 @@ int gewinner(const int spielfeld[GROESSE_Y][GROESSE_X])
             {
                 ++zaehlerSpieler2;
             }
-
         }
     }
 
@@ -141,18 +137,16 @@ int gewinner(const int spielfeld[GROESSE_Y][GROESSE_X])
 }
 
 /**
-* @brief Ueberprueft fuer zwei Indizes, ob sie auf dem Spielfeld sind
-*
-* @param posX Index fuer die Spalte
-* @param posY Index fuer die Zeile
-* @return true, wenn Spalte und Zeile innerhalb des Spielfelds sind, sonst false
-*/
+ * @brief Ueberprueft fuer zwei Indizes, ob sie auf dem Spielfeld sind
+ *
+ * @param posX Index fuer die Spalte
+ * @param posY Index fuer die Zeile
+ * @return true, wenn Spalte und Zeile innerhalb des Spielfelds sind, sonst false
+ */
 bool aufSpielfeld(const int posX, const int posY)
 {
-    // Hier erfolgt jetzt Ihre Implementierung ...
-    return false;
+    return (posX >= 0 && posX < GROESSE_X && posY >= 0 && posY < GROESSE_Y);
 }
-
 
 /**
  * @brief Ueberprueft fuer zwei Indizes, ob der Zug gueltig ist
@@ -170,8 +164,7 @@ bool aufSpielfeld(const int posX, const int posY)
  */
 bool zugGueltig(const int spielfeld[GROESSE_Y][GROESSE_X], const int aktuellerSpieler, const int posX, const int posY)
 {
-    int gegner = 3 - aktuellerSpieler; // dasselbe wie: if aktuellerSpieler == 1 -> gegner = 2
-                                       //               if aktuellerSpieler == 2 -> gegner = 1
+    int gegner = 3 - aktuellerSpieler;
 
     if (spielfeld[posY][posX] != 0) // ist das Feld leer?
     {
@@ -183,12 +176,39 @@ bool zugGueltig(const int spielfeld[GROESSE_Y][GROESSE_X], const int aktuellerSp
     {
         for (int i = -1; i <= 1; i++)
         {
-            // Hier erfolgt jetzt Ihre Implementierung ...
+            if (i == 0 && j == 0)
+                continue; // keine Richtung
+
+            int x = posX + i;
+            int y = posY + j;
+            bool gegnerGefunden = false;
+
+            // Erstes Feld in Richtung muss Gegner sein
+            if (aufSpielfeld(x, y) && spielfeld[y][x] == gegner)
+            {
+                gegnerGefunden = true;
+                x += i;
+                y += j;
+                // Weiter in Richtung suchen
+                while (aufSpielfeld(x, y))
+                {
+                    if (spielfeld[y][x] == 0)
+                        break;
+                    if (spielfeld[y][x] == aktuellerSpieler)
+                    {
+                        if (gegnerGefunden)
+                            return true;
+                        else
+                            break;
+                    }
+                    x += i;
+                    y += j;
+                }
+            }
         }
     }
     return false;
 }
-
 
 /**
  * @brief Funktion, die einen Zug ausfuehrt
@@ -202,7 +222,7 @@ void zugAusfuehren(int spielfeld[GROESSE_Y][GROESSE_X], const int aktuellerSpiel
 {
     int gegner = 3 - aktuellerSpieler;
 
-    //Alle Richtungen bearbeiten
+    // Alle Richtungen bearbeiten
     for (int j = -1; j <= 1; j++)
     {
         for (int i = -1; i <= 1; i++)
@@ -213,16 +233,14 @@ void zugAusfuehren(int spielfeld[GROESSE_Y][GROESSE_X], const int aktuellerSpiel
             // Hier erfolgt jetzt Ihre Implementierung ...
         }
     }
-
 }
 
 int moeglicheZuege(const int spielfeld[GROESSE_Y][GROESSE_X], const int aktuellerSpieler)
 {
     // Hier erfolgt jetzt Ihre Implementierung ...
-    
+
     return 0;
 }
-
 
 bool menschlicherZug(int spielfeld[GROESSE_Y][GROESSE_X], const int aktuellerSpieler)
 {
@@ -246,34 +264,36 @@ bool menschlicherZug(int spielfeld[GROESSE_Y][GROESSE_X], const int aktuellerSpi
     while (true)
     {
         std::string eingabe;
-        std::cout << std::endl << "Du bist " << symbolSpieler << ". Dein Zug (z.B. A1, a1): " ;
+        std::cout << std::endl
+                  << "Du bist " << symbolSpieler << ". Dein Zug (z.B. A1, a1): ";
         std::cin >> eingabe;
-        posX = (int) eingabe[0] % 32 -1;
-        posY = (int) eingabe[1] - 49;
+        posX = (int)eingabe[0] % 32 - 1;
+        posY = (int)eingabe[1] - 49;
 
         if (zugGueltig(spielfeld, aktuellerSpieler, posX, posY))
         {
-            //accept turn;
+            // accept turn;
             break;
         }
         else
         {
-            std::cout << std::endl << "Ungueltige Eingabe !" << std::endl;
+            std::cout << std::endl
+                      << "Ungueltige Eingabe !" << std::endl;
         }
     }
 
     zugAusfuehren(spielfeld, aktuellerSpieler, posX, posY);
-    std::cout << std::endl << "Spieler " << aktuellerSpieler << " setzt auf " << (char) (posX + 65) << (posY + 1) << std::endl;
+    std::cout << std::endl
+              << "Spieler " << aktuellerSpieler << " setzt auf " << (char)(posX + 65) << (posY + 1) << std::endl;
 
     return true;
 }
-
 
 void spielen(const int spielerTyp[2])
 {
     int spielfeld[GROESSE_Y][GROESSE_X];
 
-    //Erzeuge Startaufstellung
+    // Erzeuge Startaufstellung
     initialisiereSpielfeld(spielfeld);
 
     int aktuellerSpieler = 1;
@@ -282,7 +302,7 @@ void spielen(const int spielerTyp[2])
     // solange noch Zuege bei einem der beiden Spieler moeglich sind
     //
     // Hier erfolgt jetzt Ihre Implementierung ...
-    
+
     switch (gewinner(spielfeld))
     {
         // Hier erfolgt jetzt Ihre Implementierung ...
@@ -303,9 +323,10 @@ int main()
             std::cout << "MINDESTENS EIN TEST IST FEHLGESCHLAGEN!" << std::endl;
             exit(1);
         }
-        std::cout << std::endl << std::endl;
+        std::cout << std::endl
+                  << std::endl;
     }
-    
+
     // Die folgenden drei Zeilen werden auskommentiert oder geloescht, nachdem Sie die Funktion spielen()
     // implementiert haben (waeren sonst doppelt)
     int spielfeld[GROESSE_Y][GROESSE_X];
@@ -314,10 +335,10 @@ int main()
 
     zeigeSpielfeld(spielfeld);
 
-     int spielerTyp[2] = { MENSCH, COMPUTER };  // Feld, das Informationen ueber den Typ des Spielers enthaelt. MENSCH(=1) oder COPMUTER(=2)
-     spielen(spielerTyp);
+    int spielerTyp[2] = {COMPUTER, COMPUTER}; // Feld, das Informationen ueber den Typ des Spielers enthaelt. MENSCH(=1) oder COPMUTER(=2)
+    spielen(spielerTyp);
     //
     // Hier erfolgt jetzt Ihre Implementierung ...
-    
+
     return 0;
 }
