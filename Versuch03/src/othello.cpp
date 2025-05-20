@@ -326,20 +326,57 @@ bool menschlicherZug(int spielfeld[GROESSE_Y][GROESSE_X], const int aktuellerSpi
 void spielen(const int spielerTyp[2])
 {
     int spielfeld[GROESSE_Y][GROESSE_X];
-
-    // Erzeuge Startaufstellung
     initialisiereSpielfeld(spielfeld);
 
     int aktuellerSpieler = 1;
+    int passen[2] = {0, 0}; // Merkt, ob Spieler 1 oder 2 passen musste
+
     zeigeSpielfeld(spielfeld);
 
-    // solange noch Zuege bei einem der beiden Spieler moeglich sind
-    //
-    // Hier erfolgt jetzt Ihre Implementierung ...
+    while (true)
+    {
+        if (moeglicheZuege(spielfeld, aktuellerSpieler) == 0)
+        {
+            std::cout << "Spieler " << aktuellerSpieler << " hat keinen Zug und muss aussetzen!" << std::endl;
+            passen[aktuellerSpieler - 1] = 1;
+        }
+        else
+        {
+            passen[aktuellerSpieler - 1] = 0;
+            if (spielerTyp[aktuellerSpieler - 1] == COMPUTER)
+            {
+                std::cout << "Computer am Zug" << std::endl;
+                computerZug(spielfeld, aktuellerSpieler);
+            }
+            else
+            {
+                std::cout << "Mensch am Zug" << std::endl;
+                menschlicherZug(spielfeld, aktuellerSpieler);
+            }
+            zeigeSpielfeld(spielfeld);
+        }
+
+        // Prüfen, ob beide Spieler passen mussten
+        if (passen[0] == 1 && passen[1] == 1)
+        {
+            std::cout << "Beide Spieler konnten nicht mehr ziehen. Das Spiel ist beendet." << std::endl;
+            break;
+        }
+
+        aktuellerSpieler = 3 - aktuellerSpieler; // Spieler wechseln
+    }
 
     switch (gewinner(spielfeld))
     {
-        // Hier erfolgt jetzt Ihre Implementierung ...
+    case 0:
+        std::cout << "Unentschieden!" << std::endl;
+        break;
+    case 1:
+        std::cout << "Spieler 1 (X) gewinnt!" << std::endl;
+        break;
+    case 2:
+        std::cout << "Spieler 2 (O) gewinnt!" << std::endl;
+        break;
     }
 }
 
