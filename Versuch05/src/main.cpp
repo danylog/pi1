@@ -47,7 +47,16 @@ int main()
                   << "(7): Datenelement vorne hinzufuegen" << std::endl
                   << "(0): Beenden" << std::endl;
         std::cin >> abfrage;
-        std::cin.ignore(10, '\n');
+        if (std::cin.fail())
+        {
+            std::cin.clear();                                                   // Fehlerzustand zurücksetzen
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Rest der Zeile ignorieren
+            abfrage = ' ';                                                      // ungültige Eingabe
+        }
+        else
+        {
+            std::cin.ignore(10, '\n');
+        }
 
         switch (abfrage)
         {
