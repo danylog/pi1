@@ -7,7 +7,11 @@
 #include <locale>
 #include "Student.h"
 
-// Hilfsfunktion zum Trimmen von Strings
+/**
+ * @brief Entfernt führende und nachfolgende Leerzeichen aus einem String.
+ *
+ * @param s Referenz auf den zu bearbeitenden String.
+ */
 static inline void trim(std::string &s)
 {
     s.erase(s.begin(), std::find_if(s.begin(), s.end(), [](unsigned char ch)
@@ -18,6 +22,17 @@ static inline void trim(std::string &s)
             s.end());
 }
 
+/**
+ * @brief Hauptfunktion des Programms.
+ *
+ * Bietet ein Menü zur Verwaltung einer Studentenliste:
+ * - Ausgabe vorwärts/rückwärts
+ * - Löschen von Elementen
+ * - Einlesen/Speichern aus/in Datei
+ * - Sortieren der Liste
+ *
+ * @return int Rückgabewert des Programms (0 bei Erfolg)
+ */
 int main()
 {
     std::vector<Student> studenten;
@@ -40,16 +55,25 @@ int main()
         switch (auswahl)
         {
         case 1:
+            /**
+             * @brief Gibt die Studentenliste vorwärts aus.
+             */
             std::cout << "Vorwärts:" << std::endl;
             for (const auto &s : studenten)
                 std::cout << s << std::endl;
             break;
         case 2:
+            /**
+             * @brief Gibt die Studentenliste rückwärts aus.
+             */
             std::cout << "Rückwärts:" << std::endl;
             for (auto rit = studenten.rbegin(); rit != studenten.rend(); ++rit)
                 std::cout << *rit << std::endl;
             break;
         case 3:
+            /**
+             * @brief Löscht das erste Element der Studentenliste.
+             */
             if (!studenten.empty())
             {
                 studenten.erase(studenten.begin());
@@ -62,6 +86,9 @@ int main()
             break;
         case 4:
         {
+            /**
+             * @brief Liest Studentendaten aus einer Datei ein.
+             */
             std::string dateiname;
             std::cout << "Dateiname zum Einlesen: ";
             std::cin >> dateiname;
@@ -92,6 +119,9 @@ int main()
         }
         case 5:
         {
+            /**
+             * @brief Löscht einen Studenten anhand der Matrikelnummer.
+             */
             std::string matrikel;
             std::cout << "Matrikelnummer des zu löschenden Studenten: ";
             std::cin >> matrikel;
@@ -120,6 +150,9 @@ int main()
             break;
         }
         case 6:
+            /**
+             * @brief Sortiert die Studentenliste.
+             */
             std::sort(studenten.begin(), studenten.end());
             std::cout << "Liste wurde sortiert:" << std::endl;
             for (const auto &s : studenten)
@@ -127,6 +160,9 @@ int main()
             break;
         case 7:
         {
+            /**
+             * @brief Speichert die Studentenliste in eine Datei.
+             */
             std::string dateiname;
             std::cout << "Dateiname zum Speichern: ";
             std::cin >> dateiname;
@@ -149,6 +185,9 @@ int main()
             break;
         }
         case 0:
+            /**
+             * @brief Beendet das Programm.
+             */
             std::cout << "Programm beendet." << std::endl;
             break;
         default:

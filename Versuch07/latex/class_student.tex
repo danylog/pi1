@@ -1,0 +1,167 @@
+\doxysection{Student Class Reference}
+\hypertarget{class_student}{}\label{class_student}\index{Student@{Student}}
+
+
+Repräsentiert einen Studenten mit Matrikelnummer, Name, Geburtsdatum und Adresse.  
+
+
+
+
+{\ttfamily \#include $<$Student.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_student_a44b0dc0efbc95f687706f28363e897db}{operator$<$}} (const \mbox{\hyperlink{class_student}{Student}} \&other) const
+\begin{DoxyCompactList}\small\item\em Vergleicht zwei Studenten anhand ihrer Matrikelnummer. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_student_a8ed21df54035f4067179661924875aac}{operator$>$}} (const \mbox{\hyperlink{class_student}{Student}} \&other) const
+\begin{DoxyCompactList}\small\item\em Vergleicht zwei Studenten anhand ihrer Matrikelnummer. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_student_a8f7c31ed0e331481ac58f12b2e822047}{operator==}} (const \mbox{\hyperlink{class_student}{Student}} \&other) const
+\begin{DoxyCompactList}\small\item\em Prüft, ob zwei Studenten die gleiche Matrikelnummer haben. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_student_a341596813c1357edd1958f736a2bdf09}{matrikelnummer}}
+\begin{DoxyCompactList}\small\item\em Die Matrikelnummer des Studenten. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_student_a9aeb48a925f370292564def17482f0ec}{name}}
+\begin{DoxyCompactList}\small\item\em Der Name des Studenten. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_student_a215a37b134feccb737171e4548de0e37}{geburtsdatum}}
+\begin{DoxyCompactList}\small\item\em Das Geburtsdatum des Studenten. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_student_a4692c82013be6be6f1ba03333e86566f}{adresse}}
+\begin{DoxyCompactList}\small\item\em Die Adresse des Studenten. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{class_student_a07bff4b34ee18e927d9e711b6aef336f}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{class_student}{Student}} \&s)
+\begin{DoxyCompactList}\small\item\em Ausgabeoperator für einen Studenten. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Repräsentiert einen Studenten mit Matrikelnummer, Name, Geburtsdatum und Adresse. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_student_a44b0dc0efbc95f687706f28363e897db}\index{Student@{Student}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily \label{class_student_a44b0dc0efbc95f687706f28363e897db} 
+bool Student\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_student}{Student}} \&}]{other}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Vergleicht zwei Studenten anhand ihrer Matrikelnummer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Der andere \doxylink{class_student}{Student}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, wenn die Matrikelnummer kleiner ist. 
+\end{DoxyReturn}
+\Hypertarget{class_student_a8f7c31ed0e331481ac58f12b2e822047}\index{Student@{Student}!operator==@{operator==}}
+\index{operator==@{operator==}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{class_student_a8f7c31ed0e331481ac58f12b2e822047} 
+bool Student\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_student}{Student}} \&}]{other}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prüft, ob zwei Studenten die gleiche Matrikelnummer haben. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Der andere \doxylink{class_student}{Student}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, wenn die Matrikelnummern gleich sind. 
+\end{DoxyReturn}
+\Hypertarget{class_student_a8ed21df54035f4067179661924875aac}\index{Student@{Student}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily \label{class_student_a8ed21df54035f4067179661924875aac} 
+bool Student\+::operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_student}{Student}} \&}]{other}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Vergleicht zwei Studenten anhand ihrer Matrikelnummer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Der andere \doxylink{class_student}{Student}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, wenn die Matrikelnummer größer ist. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{class_student_a07bff4b34ee18e927d9e711b6aef336f}\index{Student@{Student}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily \label{class_student_a07bff4b34ee18e927d9e711b6aef336f} 
+std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os}{, }\item[{const \mbox{\hyperlink{class_student}{Student}} \&}]{s}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Ausgabeoperator für einen Studenten. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & Der Ausgabestream. \\
+\hline
+{\em s} & Der \doxylink{class_student}{Student}, der ausgegeben werden soll. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Referenz auf den Ausgabestream. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_student_a4692c82013be6be6f1ba03333e86566f}\index{Student@{Student}!adresse@{adresse}}
+\index{adresse@{adresse}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{adresse}{adresse}}
+{\footnotesize\ttfamily \label{class_student_a4692c82013be6be6f1ba03333e86566f} 
+std\+::string Student\+::adresse}
+
+
+
+Die Adresse des Studenten. 
+
+\Hypertarget{class_student_a215a37b134feccb737171e4548de0e37}\index{Student@{Student}!geburtsdatum@{geburtsdatum}}
+\index{geburtsdatum@{geburtsdatum}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{geburtsdatum}{geburtsdatum}}
+{\footnotesize\ttfamily \label{class_student_a215a37b134feccb737171e4548de0e37} 
+std\+::string Student\+::geburtsdatum}
+
+
+
+Das Geburtsdatum des Studenten. 
+
+\Hypertarget{class_student_a341596813c1357edd1958f736a2bdf09}\index{Student@{Student}!matrikelnummer@{matrikelnummer}}
+\index{matrikelnummer@{matrikelnummer}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{matrikelnummer}{matrikelnummer}}
+{\footnotesize\ttfamily \label{class_student_a341596813c1357edd1958f736a2bdf09} 
+std\+::string Student\+::matrikelnummer}
+
+
+
+Die Matrikelnummer des Studenten. 
+
+\Hypertarget{class_student_a9aeb48a925f370292564def17482f0ec}\index{Student@{Student}!name@{name}}
+\index{name@{name}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily \label{class_student_a9aeb48a925f370292564def17482f0ec} 
+std\+::string Student\+::name}
+
+
+
+Der Name des Studenten. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\mbox{\hyperlink{_student_8h}{Student.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,264 @@
+\doxysection{Main\+Window Class Reference}
+\hypertarget{class_main_window}{}\label{class_main_window}\index{MainWindow@{MainWindow}}
+
+
+Die Klasse \doxylink{class_main_window}{Main\+Window} stellt das Hauptfenster der Anwendung dar.  
+
+
+
+
+{\ttfamily \#include $<$mainwindow.\+h$>$}
+
+Inheritance diagram for Main\+Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_main_window}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{Main\+Window}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Konstruktor für das Hauptfenster. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{\texorpdfstring{$\sim$}{\string~}\+Main\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Destruktor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_main_window_a4de79c63c7fa0b8d7c468ac71f20be81}{on\+\_\+push\+Button\+\_\+clicked}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a5b278385cd01d4980afc6bf419ccb47d}{on\+\_\+line\+Edit\+\_\+eingabe\+\_\+editing\+Finished}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_ab4487c4b02224acd4a0193d38b704ddb}{on\+\_\+action\+Exit\+\_\+triggered}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a1135e68678922defd95d5fc0404771fa}{on\+\_\+action\+Clear\+\_\+\+Scene\+\_\+triggered}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a53af19c6490bf571b537fba08a9453f8}{on\+\_\+action\+Ueber\+\_\+uns\+\_\+triggered}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_ae0e46dc3da4ee07bf66e73e20300220c}{on\+\_\+push\+Button\+\_\+2\+\_\+clicked}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a12cf88402a93adef89645ba4e4cb7be1}{on\+\_\+push\+Button\+\_\+3\+\_\+clicked}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_ae80a036ef40bb6ac0165471f71fef287}{on\+\_\+push\+Button\+\_\+4\+\_\+clicked}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a605071d51753ec2a516cbf9b761d3ea3}{test\+Abstract\+Map}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a008fea9a9dfe8236e3b768b2113bb21e}{on\+\_\+check\+Box\+\_\+clicked}} (bool checked)
+\item 
+void \mbox{\hyperlink{class_main_window_aab86c5aae6062151b03df99bc416710d}{on\+\_\+push\+Button\+\_\+new\+City\+\_\+clicked}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a9d346a04c520cc3403bdce0c1e36535e}{on\+\_\+fill\+Map\+\_\+clicked}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_acf8b634afabed9b3dd6cb8351c77bb1f}{on\+\_\+push\+Button\+\_\+test\+Abstract\+Map\+\_\+clicked}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_aa6e1a6d059d90db3ac8a0c15360954d0}{on\+\_\+push\+Button\+\_\+test\+Dijkstra\+\_\+clicked}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_a5677e5be1a8cf54c442cf4a285db7233}{on\+\_\+push\+Button\+\_\+6\+\_\+clicked}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_afe47d292482dc3e616cf88535a4c5466}{on\+\_\+push\+Button\+\_\+new\+Street\+\_\+clicked}} ()
+\item 
+void \mbox{\hyperlink{class_main_window_ab3622380204e3a191df349b669000503}{update\+City\+Combo\+Boxes}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ui_1_1_main_window}{Ui\+::\+Main\+Window}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}}
+\begin{DoxyCompactList}\small\item\em Benutzeroberfläche. \end{DoxyCompactList}\item 
+QGraphics\+Scene \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_a51ac2b126495216832501cea3929c6f6}{scene}}
+\begin{DoxyCompactList}\small\item\em Szene für die grafische Darstellung. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_map}{Map}} \mbox{\hyperlink{class_main_window_a02ede2e87fe1cd48c810c4d1c0abc5ad}{map}}
+\begin{DoxyCompactList}\small\item\em Die Karte mit Städten und Straßen. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_city}{City}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_a17bf9e902dae0ea0c94cc32176eece71}{last\+City}} = nullptr
+\begin{DoxyCompactList}\small\item\em Letzte hinzugefügte Stadt. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_map_io}{Map\+Io}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_main_window_a36b3a63ef2a48441810389af39c3bcbb}{map\+Io}} = nullptr
+\begin{DoxyCompactList}\small\item\em Datenquelle für Karten. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Die Klasse \doxylink{class_main_window}{Main\+Window} stellt das Hauptfenster der Anwendung dar. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_main_window_a996c5a2b6f77944776856f08ec30858d}\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{MainWindow()}{MainWindow()}}
+{\footnotesize\ttfamily \label{class_main_window_a996c5a2b6f77944776856f08ec30858d} 
+Main\+Window\+::\+Main\+Window (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})}
+
+
+
+Konstruktor für das Hauptfenster. 
+
+\Hypertarget{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}\index{MainWindow@{MainWindow}!````~MainWindow@{\texorpdfstring{$\sim$}{\string~}MainWindow}}
+\index{````~MainWindow@{\texorpdfstring{$\sim$}{\string~}MainWindow}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}MainWindow()}{\string~MainWindow()}}
+{\footnotesize\ttfamily \label{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7} 
+Main\+Window\+::\texorpdfstring{$\sim$}{\string~}\+Main\+Window (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destruktor. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_main_window_a1135e68678922defd95d5fc0404771fa}\index{MainWindow@{MainWindow}!on\_actionClear\_Scene\_triggered@{on\_actionClear\_Scene\_triggered}}
+\index{on\_actionClear\_Scene\_triggered@{on\_actionClear\_Scene\_triggered}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_actionClear\_Scene\_triggered}{on\_actionClear\_Scene\_triggered}}
+{\footnotesize\ttfamily \label{class_main_window_a1135e68678922defd95d5fc0404771fa} 
+void Main\+Window\+::on\+\_\+action\+Clear\+\_\+\+Scene\+\_\+triggered (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+\Hypertarget{class_main_window_ab4487c4b02224acd4a0193d38b704ddb}\index{MainWindow@{MainWindow}!on\_actionExit\_triggered@{on\_actionExit\_triggered}}
+\index{on\_actionExit\_triggered@{on\_actionExit\_triggered}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_actionExit\_triggered}{on\_actionExit\_triggered}}
+{\footnotesize\ttfamily \label{class_main_window_ab4487c4b02224acd4a0193d38b704ddb} 
+void Main\+Window\+::on\+\_\+action\+Exit\+\_\+triggered (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+\Hypertarget{class_main_window_a53af19c6490bf571b537fba08a9453f8}\index{MainWindow@{MainWindow}!on\_actionUeber\_uns\_triggered@{on\_actionUeber\_uns\_triggered}}
+\index{on\_actionUeber\_uns\_triggered@{on\_actionUeber\_uns\_triggered}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_actionUeber\_uns\_triggered}{on\_actionUeber\_uns\_triggered}}
+{\footnotesize\ttfamily \label{class_main_window_a53af19c6490bf571b537fba08a9453f8} 
+void Main\+Window\+::on\+\_\+action\+Ueber\+\_\+uns\+\_\+triggered (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+\Hypertarget{class_main_window_a008fea9a9dfe8236e3b768b2113bb21e}\index{MainWindow@{MainWindow}!on\_checkBox\_clicked@{on\_checkBox\_clicked}}
+\index{on\_checkBox\_clicked@{on\_checkBox\_clicked}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_checkBox\_clicked}{on\_checkBox\_clicked}}
+{\footnotesize\ttfamily \label{class_main_window_a008fea9a9dfe8236e3b768b2113bb21e} 
+void Main\+Window\+::on\+\_\+check\+Box\+\_\+clicked (\begin{DoxyParamCaption}\item[{bool}]{checked}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+\Hypertarget{class_main_window_a9d346a04c520cc3403bdce0c1e36535e}\index{MainWindow@{MainWindow}!on\_fillMap\_clicked@{on\_fillMap\_clicked}}
+\index{on\_fillMap\_clicked@{on\_fillMap\_clicked}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_fillMap\_clicked}{on\_fillMap\_clicked}}
+{\footnotesize\ttfamily \label{class_main_window_a9d346a04c520cc3403bdce0c1e36535e} 
+void Main\+Window\+::on\+\_\+fill\+Map\+\_\+clicked (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+\Hypertarget{class_main_window_a5b278385cd01d4980afc6bf419ccb47d}\index{MainWindow@{MainWindow}!on\_lineEdit\_eingabe\_editingFinished@{on\_lineEdit\_eingabe\_editingFinished}}
+\index{on\_lineEdit\_eingabe\_editingFinished@{on\_lineEdit\_eingabe\_editingFinished}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_lineEdit\_eingabe\_editingFinished}{on\_lineEdit\_eingabe\_editingFinished}}
+{\footnotesize\ttfamily \label{class_main_window_a5b278385cd01d4980afc6bf419ccb47d} 
+void Main\+Window\+::on\+\_\+line\+Edit\+\_\+eingabe\+\_\+editing\+Finished (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+\Hypertarget{class_main_window_ae0e46dc3da4ee07bf66e73e20300220c}\index{MainWindow@{MainWindow}!on\_pushButton\_2\_clicked@{on\_pushButton\_2\_clicked}}
+\index{on\_pushButton\_2\_clicked@{on\_pushButton\_2\_clicked}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_pushButton\_2\_clicked}{on\_pushButton\_2\_clicked}}
+{\footnotesize\ttfamily \label{class_main_window_ae0e46dc3da4ee07bf66e73e20300220c} 
+void Main\+Window\+::on\+\_\+push\+Button\+\_\+2\+\_\+clicked (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+\Hypertarget{class_main_window_a12cf88402a93adef89645ba4e4cb7be1}\index{MainWindow@{MainWindow}!on\_pushButton\_3\_clicked@{on\_pushButton\_3\_clicked}}
+\index{on\_pushButton\_3\_clicked@{on\_pushButton\_3\_clicked}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_pushButton\_3\_clicked}{on\_pushButton\_3\_clicked}}
+{\footnotesize\ttfamily \label{class_main_window_a12cf88402a93adef89645ba4e4cb7be1} 
+void Main\+Window\+::on\+\_\+push\+Button\+\_\+3\+\_\+clicked (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+\Hypertarget{class_main_window_ae80a036ef40bb6ac0165471f71fef287}\index{MainWindow@{MainWindow}!on\_pushButton\_4\_clicked@{on\_pushButton\_4\_clicked}}
+\index{on\_pushButton\_4\_clicked@{on\_pushButton\_4\_clicked}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_pushButton\_4\_clicked}{on\_pushButton\_4\_clicked}}
+{\footnotesize\ttfamily \label{class_main_window_ae80a036ef40bb6ac0165471f71fef287} 
+void Main\+Window\+::on\+\_\+push\+Button\+\_\+4\+\_\+clicked (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+\Hypertarget{class_main_window_a5677e5be1a8cf54c442cf4a285db7233}\index{MainWindow@{MainWindow}!on\_pushButton\_6\_clicked@{on\_pushButton\_6\_clicked}}
+\index{on\_pushButton\_6\_clicked@{on\_pushButton\_6\_clicked}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_pushButton\_6\_clicked}{on\_pushButton\_6\_clicked}}
+{\footnotesize\ttfamily \label{class_main_window_a5677e5be1a8cf54c442cf4a285db7233} 
+void Main\+Window\+::on\+\_\+push\+Button\+\_\+6\+\_\+clicked (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+\Hypertarget{class_main_window_a4de79c63c7fa0b8d7c468ac71f20be81}\index{MainWindow@{MainWindow}!on\_pushButton\_clicked@{on\_pushButton\_clicked}}
+\index{on\_pushButton\_clicked@{on\_pushButton\_clicked}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_pushButton\_clicked}{on\_pushButton\_clicked}}
+{\footnotesize\ttfamily \label{class_main_window_a4de79c63c7fa0b8d7c468ac71f20be81} 
+void Main\+Window\+::on\+\_\+push\+Button\+\_\+clicked (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+\Hypertarget{class_main_window_aab86c5aae6062151b03df99bc416710d}\index{MainWindow@{MainWindow}!on\_pushButton\_newCity\_clicked@{on\_pushButton\_newCity\_clicked}}
+\index{on\_pushButton\_newCity\_clicked@{on\_pushButton\_newCity\_clicked}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_pushButton\_newCity\_clicked}{on\_pushButton\_newCity\_clicked}}
+{\footnotesize\ttfamily \label{class_main_window_aab86c5aae6062151b03df99bc416710d} 
+void Main\+Window\+::on\+\_\+push\+Button\+\_\+new\+City\+\_\+clicked (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+\Hypertarget{class_main_window_afe47d292482dc3e616cf88535a4c5466}\index{MainWindow@{MainWindow}!on\_pushButton\_newStreet\_clicked@{on\_pushButton\_newStreet\_clicked}}
+\index{on\_pushButton\_newStreet\_clicked@{on\_pushButton\_newStreet\_clicked}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_pushButton\_newStreet\_clicked}{on\_pushButton\_newStreet\_clicked}}
+{\footnotesize\ttfamily \label{class_main_window_afe47d292482dc3e616cf88535a4c5466} 
+void Main\+Window\+::on\+\_\+push\+Button\+\_\+new\+Street\+\_\+clicked (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+\Hypertarget{class_main_window_acf8b634afabed9b3dd6cb8351c77bb1f}\index{MainWindow@{MainWindow}!on\_pushButton\_testAbstractMap\_clicked@{on\_pushButton\_testAbstractMap\_clicked}}
+\index{on\_pushButton\_testAbstractMap\_clicked@{on\_pushButton\_testAbstractMap\_clicked}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_pushButton\_testAbstractMap\_clicked}{on\_pushButton\_testAbstractMap\_clicked}}
+{\footnotesize\ttfamily \label{class_main_window_acf8b634afabed9b3dd6cb8351c77bb1f} 
+void Main\+Window\+::on\+\_\+push\+Button\+\_\+test\+Abstract\+Map\+\_\+clicked (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+\Hypertarget{class_main_window_aa6e1a6d059d90db3ac8a0c15360954d0}\index{MainWindow@{MainWindow}!on\_pushButton\_testDijkstra\_clicked@{on\_pushButton\_testDijkstra\_clicked}}
+\index{on\_pushButton\_testDijkstra\_clicked@{on\_pushButton\_testDijkstra\_clicked}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{on\_pushButton\_testDijkstra\_clicked}{on\_pushButton\_testDijkstra\_clicked}}
+{\footnotesize\ttfamily \label{class_main_window_aa6e1a6d059d90db3ac8a0c15360954d0} 
+void Main\+Window\+::on\+\_\+push\+Button\+\_\+test\+Dijkstra\+\_\+clicked (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+\Hypertarget{class_main_window_a605071d51753ec2a516cbf9b761d3ea3}\index{MainWindow@{MainWindow}!testAbstractMap@{testAbstractMap}}
+\index{testAbstractMap@{testAbstractMap}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{testAbstractMap}{testAbstractMap}}
+{\footnotesize\ttfamily \label{class_main_window_a605071d51753ec2a516cbf9b761d3ea3} 
+void Main\+Window\+::test\+Abstract\+Map (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+\Hypertarget{class_main_window_ab3622380204e3a191df349b669000503}\index{MainWindow@{MainWindow}!updateCityComboBoxes@{updateCityComboBoxes}}
+\index{updateCityComboBoxes@{updateCityComboBoxes}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{updateCityComboBoxes}{updateCityComboBoxes}}
+{\footnotesize\ttfamily \label{class_main_window_ab3622380204e3a191df349b669000503} 
+void Main\+Window\+::update\+City\+Combo\+Boxes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_main_window_a17bf9e902dae0ea0c94cc32176eece71}\index{MainWindow@{MainWindow}!lastCity@{lastCity}}
+\index{lastCity@{lastCity}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{lastCity}{lastCity}}
+{\footnotesize\ttfamily \label{class_main_window_a17bf9e902dae0ea0c94cc32176eece71} 
+\mbox{\hyperlink{class_city}{City}}\texorpdfstring{$\ast$}{*} Main\+Window\+::last\+City = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Letzte hinzugefügte Stadt. 
+
+\Hypertarget{class_main_window_a02ede2e87fe1cd48c810c4d1c0abc5ad}\index{MainWindow@{MainWindow}!map@{map}}
+\index{map@{map}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{map}{map}}
+{\footnotesize\ttfamily \label{class_main_window_a02ede2e87fe1cd48c810c4d1c0abc5ad} 
+\mbox{\hyperlink{class_map}{Map}} Main\+Window\+::map\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Die Karte mit Städten und Straßen. 
+
+\Hypertarget{class_main_window_a36b3a63ef2a48441810389af39c3bcbb}\index{MainWindow@{MainWindow}!mapIo@{mapIo}}
+\index{mapIo@{mapIo}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{mapIo}{mapIo}}
+{\footnotesize\ttfamily \label{class_main_window_a36b3a63ef2a48441810389af39c3bcbb} 
+\mbox{\hyperlink{class_map_io}{Map\+Io}}\texorpdfstring{$\ast$}{*} Main\+Window\+::map\+Io = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Datenquelle für Karten. 
+
+\Hypertarget{class_main_window_a51ac2b126495216832501cea3929c6f6}\index{MainWindow@{MainWindow}!scene@{scene}}
+\index{scene@{scene}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{scene}{scene}}
+{\footnotesize\ttfamily \label{class_main_window_a51ac2b126495216832501cea3929c6f6} 
+QGraphics\+Scene\texorpdfstring{$\ast$}{*} Main\+Window\+::scene\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Szene für die grafische Darstellung. 
+
+\Hypertarget{class_main_window_a35466a70ed47252a0191168126a352a5}\index{MainWindow@{MainWindow}!ui@{ui}}
+\index{ui@{ui}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily \label{class_main_window_a35466a70ed47252a0191168126a352a5} 
+\mbox{\hyperlink{class_ui_1_1_main_window}{Ui\+::\+Main\+Window}}\texorpdfstring{$\ast$}{*} Main\+Window\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Benutzeroberfläche. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{mainwindow_8h}{mainwindow.\+h}}\item 
+\mbox{\hyperlink{mainwindow_8cpp}{mainwindow.\+cpp}}\end{DoxyCompactItemize}

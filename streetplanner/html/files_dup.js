@@ -1,0 +1,25 @@
+var files_dup =
+[
+    [ "build", "dir_4fef79e7177ba769987a8da36c892c5f.html", "dir_4fef79e7177ba769987a8da36c892c5f" ],
+    [ "abstractmap.cpp", "abstractmap_8cpp.html", null ],
+    [ "abstractmap.h", "abstractmap_8h.html", "abstractmap_8h" ],
+    [ "addcitydialog.cpp", "addcitydialog_8cpp.html", null ],
+    [ "addcitydialog.h", "addcitydialog_8h.html", "addcitydialog_8h" ],
+    [ "addstreetdialog.cpp", "addstreetdialog_8cpp.html", null ],
+    [ "addstreetdialog.h", "addstreetdialog_8h.html", "addstreetdialog_8h" ],
+    [ "city.cpp", "city_8cpp.html", null ],
+    [ "city.h", "city_8h.html", "city_8h" ],
+    [ "dijkstra.cpp", "dijkstra_8cpp.html", "dijkstra_8cpp" ],
+    [ "dijkstra.h", "dijkstra_8h.html", "dijkstra_8h" ],
+    [ "main.cpp", "main_8cpp.html", "main_8cpp" ],
+    [ "mainwindow.cpp", "mainwindow_8cpp.html", null ],
+    [ "mainwindow.h", "mainwindow_8h.html", "mainwindow_8h" ],
+    [ "map.cpp", "map_8cpp.html", null ],
+    [ "map.h", "map_8h.html", "map_8h" ],
+    [ "mapio.cpp", "mapio_8cpp.html", null ],
+    [ "mapio.h", "mapio_8h.html", "mapio_8h" ],
+    [ "mapionrw.cpp", "mapionrw_8cpp.html", null ],
+    [ "mapionrw.h", "mapionrw_8h.html", "mapionrw_8h" ],
+    [ "street.cpp", "street_8cpp.html", null ],
+    [ "street.h", "street_8h.html", "street_8h" ]
+];

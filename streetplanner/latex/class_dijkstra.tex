@@ -1,0 +1,64 @@
+\doxysection{Dijkstra Class Reference}
+\hypertarget{class_dijkstra}{}\label{class_dijkstra}\index{Dijkstra@{Dijkstra}}
+
+
+Stellt den Dijkstra-\/\+Algorithmus zur Wegsuche bereit.  
+
+
+
+
+{\ttfamily \#include $<$dijkstra.\+h$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static QVector$<$ \mbox{\hyperlink{class_street}{Street}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_dijkstra_a0aa8a6e5b8881b26150d7d29a0b2e354}{search}} (const \mbox{\hyperlink{class_abstract_map}{Abstract\+Map}} \&map, QString start, QString target)
+\begin{DoxyCompactList}\small\item\em Sucht den kürzesten Weg zwischen zwei Städten. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_dijkstra_ad7c7bb035ef96e4dbd652fe2bd11a2be}{Dijkstra}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Stellt den Dijkstra-\/\+Algorithmus zur Wegsuche bereit. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_dijkstra_ad7c7bb035ef96e4dbd652fe2bd11a2be}\index{Dijkstra@{Dijkstra}!Dijkstra@{Dijkstra}}
+\index{Dijkstra@{Dijkstra}!Dijkstra@{Dijkstra}}
+\doxysubsubsection{\texorpdfstring{Dijkstra()}{Dijkstra()}}
+{\footnotesize\ttfamily \label{class_dijkstra_ad7c7bb035ef96e4dbd652fe2bd11a2be} 
+Dijkstra\+::\+Dijkstra (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_dijkstra_a0aa8a6e5b8881b26150d7d29a0b2e354}\index{Dijkstra@{Dijkstra}!search@{search}}
+\index{search@{search}!Dijkstra@{Dijkstra}}
+\doxysubsubsection{\texorpdfstring{search()}{search()}}
+{\footnotesize\ttfamily \label{class_dijkstra_a0aa8a6e5b8881b26150d7d29a0b2e354} 
+QVector$<$ \mbox{\hyperlink{class_street}{Street}} \texorpdfstring{$\ast$}{*} $>$ Dijkstra\+::search (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_abstract_map}{Abstract\+Map}} \&}]{map}{, }\item[{QString}]{start}{, }\item[{QString}]{target}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Sucht den kürzesten Weg zwischen zwei Städten. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & Die Karte \\
+\hline
+{\em start} & Name der Startstadt \\
+\hline
+{\em target} & Name der Zielstadt \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Liste der Straßen auf dem kürzesten Weg 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{dijkstra_8h}{dijkstra.\+h}}\item 
+\mbox{\hyperlink{dijkstra_8cpp}{dijkstra.\+cpp}}\end{DoxyCompactItemize}

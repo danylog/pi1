@@ -1,0 +1,245 @@
+\doxysection{Map Class Reference}
+\hypertarget{class_map}{}\label{class_map}\index{Map@{Map}}
+
+
+Die Klasse \doxylink{class_map}{Map} verwaltet eine Sammlung von Städten und Straßen.  
+
+
+
+
+{\ttfamily \#include $<$map.\+h$>$}
+
+Inheritance diagram for Map\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_map}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_map_a0f5ad0fd4563497b4214038cbca8b582}{Map}} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor für die \doxylink{class_map}{Map}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_map_ab70669beead9e729b7c5bae351b33236}{add\+City}} (\mbox{\hyperlink{class_city}{City}} \texorpdfstring{$\ast$}{*}city) override
+\begin{DoxyCompactList}\small\item\em Adds the provided city to this map. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_map_a61d294ea5825c8fb5bc4096e9cec2667}{add\+Street}} (\mbox{\hyperlink{class_street}{Street}} \texorpdfstring{$\ast$}{*}street) override
+\begin{DoxyCompactList}\small\item\em Adds the provided street to this map. If the cities linked by the street have not been added to this map before, the street is not added. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_map_af7386ac56bf2ff2d5598ae6e08dc8193}{draw}} (QGraphics\+Scene \&scene)
+\item 
+\mbox{\hyperlink{class_city}{City}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_map_a72a26f8b83864199fd77abae431a3e70}{find\+City}} (const QString city\+Name) const override
+\begin{DoxyCompactList}\small\item\em Search for a city in this map by given name. \end{DoxyCompactList}\item 
+QVector$<$ \mbox{\hyperlink{class_street}{Street}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_map_a40c9b543e5217d083bd094fbf76e19b7}{get\+Street\+List}} (const \mbox{\hyperlink{class_city}{City}} \texorpdfstring{$\ast$}{*}city) const override
+\begin{DoxyCompactList}\small\item\em Search for streets in this map. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_city}{City}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_map_a8342e4a44a89b2da7f7cd7c5e817723e}{get\+Opposite\+City}} (const \mbox{\hyperlink{class_street}{Street}} \texorpdfstring{$\ast$}{*}street, const \mbox{\hyperlink{class_city}{City}} \texorpdfstring{$\ast$}{*}city) const override
+\begin{DoxyCompactList}\small\item\em Look for opposite city. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_map_a70ad7dd376aa71119c8dc05eed75fd05}{get\+Length}} (const \mbox{\hyperlink{class_street}{Street}} \texorpdfstring{$\ast$}{*}street) const override
+\begin{DoxyCompactList}\small\item\em Calculate the street length. \end{DoxyCompactList}\item 
+QVector$<$ \mbox{\hyperlink{class_city}{City}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_map_a93412d7c83a42283862df61c91731c48}{get\+Cities}} () const
+\begin{DoxyCompactList}\small\item\em Gibt eine Liste aller Städte zurück. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_abstract_map}{Abstract\+Map}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_abstract_map_ab2fbb46108e2905fb1193a67510d41f0}{\texorpdfstring{$\sim$}{\string~}\+Abstract\+Map}} ()
+\begin{DoxyCompactList}\small\item\em Virtual Destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+QVector$<$ \mbox{\hyperlink{class_city}{City}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_map_ad1e11ae48a1251db7fee22ef274b060c}{cities}}
+\begin{DoxyCompactList}\small\item\em Liste der Städte. \end{DoxyCompactList}\item 
+QVector$<$ \mbox{\hyperlink{class_street}{Street}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{class_map_a9380607724bac3fe4772ba65edf93d29}{streets}}
+\begin{DoxyCompactList}\small\item\em Liste der Straßen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Die Klasse \doxylink{class_map}{Map} verwaltet eine Sammlung von Städten und Straßen. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_map_a0f5ad0fd4563497b4214038cbca8b582}\index{Map@{Map}!Map@{Map}}
+\index{Map@{Map}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{Map()}{Map()}}
+{\footnotesize\ttfamily \label{class_map_a0f5ad0fd4563497b4214038cbca8b582} 
+Map\+::\+Map (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Konstruktor für die \doxylink{class_map}{Map}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_map_ab70669beead9e729b7c5bae351b33236}\index{Map@{Map}!addCity@{addCity}}
+\index{addCity@{addCity}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{addCity()}{addCity()}}
+{\footnotesize\ttfamily \label{class_map_ab70669beead9e729b7c5bae351b33236} 
+void Map\+::add\+City (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_city}{City}} \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Adds the provided city to this map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Pointer} & to city to be added \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_abstract_map_a9938512c5ef94370786a3d1a72aa7e37}{Abstract\+Map}}.
+
+\Hypertarget{class_map_a61d294ea5825c8fb5bc4096e9cec2667}\index{Map@{Map}!addStreet@{addStreet}}
+\index{addStreet@{addStreet}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{addStreet()}{addStreet()}}
+{\footnotesize\ttfamily \label{class_map_a61d294ea5825c8fb5bc4096e9cec2667} 
+bool Map\+::add\+Street (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_street}{Street}} \texorpdfstring{$\ast$}{*}}]{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Adds the provided street to this map. If the cities linked by the street have not been added to this map before, the street is not added. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Pointer} & to the street to be added \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the street has beed added. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_abstract_map_a179d25c28087d9090314caff024b1f46}{Abstract\+Map}}.
+
+\Hypertarget{class_map_af7386ac56bf2ff2d5598ae6e08dc8193}\index{Map@{Map}!draw@{draw}}
+\index{draw@{draw}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily \label{class_map_af7386ac56bf2ff2d5598ae6e08dc8193} 
+void Map\+::draw (\begin{DoxyParamCaption}\item[{QGraphics\+Scene \&}]{scene}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_map_a72a26f8b83864199fd77abae431a3e70}\index{Map@{Map}!findCity@{findCity}}
+\index{findCity@{findCity}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{findCity()}{findCity()}}
+{\footnotesize\ttfamily \label{class_map_a72a26f8b83864199fd77abae431a3e70} 
+\mbox{\hyperlink{class_city}{City}} \texorpdfstring{$\ast$}{*} Map\+::find\+City (\begin{DoxyParamCaption}\item[{const QString}]{city\+Name}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Search for a city in this map by given name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the city pointer, if city not found nullptr 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_abstract_map_a09ddd4db3021602aa2c0ca343a8dd3a2}{Abstract\+Map}}.
+
+\Hypertarget{class_map_a93412d7c83a42283862df61c91731c48}\index{Map@{Map}!getCities@{getCities}}
+\index{getCities@{getCities}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{getCities()}{getCities()}}
+{\footnotesize\ttfamily \label{class_map_a93412d7c83a42283862df61c91731c48} 
+QVector$<$ \mbox{\hyperlink{class_city}{City}} \texorpdfstring{$\ast$}{*} $>$ Map\+::get\+Cities (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gibt eine Liste aller Städte zurück. 
+
+\Hypertarget{class_map_a70ad7dd376aa71119c8dc05eed75fd05}\index{Map@{Map}!getLength@{getLength}}
+\index{getLength@{getLength}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{getLength()}{getLength()}}
+{\footnotesize\ttfamily \label{class_map_a70ad7dd376aa71119c8dc05eed75fd05} 
+double Map\+::get\+Length (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_street}{Street}} \texorpdfstring{$\ast$}{*}}]{street}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Calculate the street length. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em street} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Length of the street 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_abstract_map_a4457b31b90038c291b84675941400238}{Abstract\+Map}}.
+
+\Hypertarget{class_map_a8342e4a44a89b2da7f7cd7c5e817723e}\index{Map@{Map}!getOppositeCity@{getOppositeCity}}
+\index{getOppositeCity@{getOppositeCity}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{getOppositeCity()}{getOppositeCity()}}
+{\footnotesize\ttfamily \label{class_map_a8342e4a44a89b2da7f7cd7c5e817723e} 
+\mbox{\hyperlink{class_city}{City}} \texorpdfstring{$\ast$}{*} Map\+::get\+Opposite\+City (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_street}{Street}} \texorpdfstring{$\ast$}{*}}]{street}{, }\item[{const \mbox{\hyperlink{class_city}{City}} \texorpdfstring{$\ast$}{*}}]{city}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Look for opposite city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em street} & \\
+\hline
+{\em city} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Opposite city of the street. If city has no connection to street returns nullptr. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_abstract_map_a621f60a374d486d6cebbfc1d038cfc64}{Abstract\+Map}}.
+
+\Hypertarget{class_map_a40c9b543e5217d083bd094fbf76e19b7}\index{Map@{Map}!getStreetList@{getStreetList}}
+\index{getStreetList@{getStreetList}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{getStreetList()}{getStreetList()}}
+{\footnotesize\ttfamily \label{class_map_a40c9b543e5217d083bd094fbf76e19b7} 
+QVector$<$ \mbox{\hyperlink{class_street}{Street}} \texorpdfstring{$\ast$}{*} $>$ Map\+::get\+Street\+List (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_city}{City}} \texorpdfstring{$\ast$}{*}}]{city}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Search for streets in this map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em city} & where you want the street\+\_\+list from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A list of all streets in this map connected to provided city. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_abstract_map_add9d35daea37d6e08391be612e7038e3}{Abstract\+Map}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_map_ad1e11ae48a1251db7fee22ef274b060c}\index{Map@{Map}!cities@{cities}}
+\index{cities@{cities}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{cities}{cities}}
+{\footnotesize\ttfamily \label{class_map_ad1e11ae48a1251db7fee22ef274b060c} 
+QVector$<$\mbox{\hyperlink{class_city}{City}} \texorpdfstring{$\ast$}{*}$>$ Map\+::cities\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Liste der Städte. 
+
+\Hypertarget{class_map_a9380607724bac3fe4772ba65edf93d29}\index{Map@{Map}!streets@{streets}}
+\index{streets@{streets}!Map@{Map}}
+\doxysubsubsection{\texorpdfstring{streets}{streets}}
+{\footnotesize\ttfamily \label{class_map_a9380607724bac3fe4772ba65edf93d29} 
+QVector$<$\mbox{\hyperlink{class_street}{Street}} \texorpdfstring{$\ast$}{*}$>$ Map\+::streets\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Liste der Straßen. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{map_8h}{map.\+h}}\item 
+\mbox{\hyperlink{map_8cpp}{map.\+cpp}}\end{DoxyCompactItemize}

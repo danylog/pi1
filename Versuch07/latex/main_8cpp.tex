@@ -1,0 +1,70 @@
+\doxysection{src/main.cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{src/main.cpp@{src/main.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$cctype$>$}\newline
+{\ttfamily \#include $<$locale$>$}\newline
+{\ttfamily \#include "{}Student.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{main_8cpp_a6ef734356291c638e5787a6c668192d4}{trim}} (std\+::string \&s)
+\begin{DoxyCompactList}\small\item\em Entfernt führende und nachfolgende Leerzeichen aus einem String. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Hauptfunktion des Programms. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Hauptfunktion des Programms. 
+
+Bietet ein Menü zur Verwaltung einer Studentenliste\+:
+\begin{DoxyItemize}
+\item Ausgabe vorwärts/rückwärts
+\item Löschen von Elementen
+\item Einlesen/\+Speichern aus/in Datei
+\item Sortieren der Liste
+\end{DoxyItemize}
+
+\begin{DoxyReturn}{Returns}
+int Rückgabewert des Programms (0 bei Erfolg) 
+\end{DoxyReturn}
+Gibt die Studentenliste vorwärts aus.
+
+Gibt die Studentenliste rückwärts aus.
+
+Löscht das erste Element der Studentenliste.
+
+Liest Studentendaten aus einer Datei ein.
+
+Löscht einen Studenten anhand der Matrikelnummer.
+
+Sortiert die Studentenliste.
+
+Speichert die Studentenliste in eine Datei.
+
+Beendet das Programm.\Hypertarget{main_8cpp_a6ef734356291c638e5787a6c668192d4}\index{main.cpp@{main.cpp}!trim@{trim}}
+\index{trim@{trim}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{trim()}{trim()}}
+{\footnotesize\ttfamily \label{main_8cpp_a6ef734356291c638e5787a6c668192d4} 
+static void trim (\begin{DoxyParamCaption}\item[{std\+::string \&}]{s}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Entfernt führende und nachfolgende Leerzeichen aus einem String. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Referenz auf den zu bearbeitenden String. \\
+\hline
+\end{DoxyParams}

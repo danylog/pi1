@@ -1,0 +1,136 @@
+\doxysection{Street Class Reference}
+\hypertarget{class_street}{}\label{class_street}\index{Street@{Street}}
+
+
+Die Klasse \doxylink{class_street}{Street} repräsentiert eine Straße zwischen zwei Städten.  
+
+
+
+
+{\ttfamily \#include $<$street.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_street_a29883e29040c8faf70a880d290ec1496}{Street}} (\mbox{\hyperlink{class_city}{City}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_street_a74635cfcf44c75219460f4bbf769babb}{cityA}}, \mbox{\hyperlink{class_city}{City}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{class_street_a321c9ed38f1604b439cb36614ea6f544}{cityB}})
+\begin{DoxyCompactList}\small\item\em Konstruktor für eine Straße. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_street_a8a445d11dfb869969bea3b8f6e4a2edf}{draw}} (QGraphics\+Scene \&scene)
+\begin{DoxyCompactList}\small\item\em Zeichnet die Straße als Linie in die Szene. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_city}{City}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_street_a619433865c665edc899d0a7e268ab0c3}{get\+CityA}} () const
+\begin{DoxyCompactList}\small\item\em Gibt die erste Stadt zurück. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_city}{City}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_street_a212916ef10c9230cf13c34ff54229eaf}{get\+CityB}} () const
+\begin{DoxyCompactList}\small\item\em Gibt die zweite Stadt zurück. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_street_a64316b1ab76eb572376f47fdb3f8fcc8}{draw\+Red}} (QGraphics\+Scene \&scene)
+\begin{DoxyCompactList}\small\item\em Zeichnet die Straße als rote, breite Linie (z.\+B. für Dijkstra-\/\+Pfad). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_city}{City}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_street_a74635cfcf44c75219460f4bbf769babb}{cityA}}
+\begin{DoxyCompactList}\small\item\em Zeiger auf die erste Stadt. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_city}{City}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_street_a321c9ed38f1604b439cb36614ea6f544}{cityB}}
+\begin{DoxyCompactList}\small\item\em Zeiger auf die zweite Stadt. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Die Klasse \doxylink{class_street}{Street} repräsentiert eine Straße zwischen zwei Städten. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_street_a29883e29040c8faf70a880d290ec1496}\index{Street@{Street}!Street@{Street}}
+\index{Street@{Street}!Street@{Street}}
+\doxysubsubsection{\texorpdfstring{Street()}{Street()}}
+{\footnotesize\ttfamily \label{class_street_a29883e29040c8faf70a880d290ec1496} 
+Street\+::\+Street (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_city}{City}} \texorpdfstring{$\ast$}{*}}]{cityA}{, }\item[{\mbox{\hyperlink{class_city}{City}} \texorpdfstring{$\ast$}{*}}]{cityB}{}\end{DoxyParamCaption})}
+
+
+
+Konstruktor für eine Straße. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cityA} & Zeiger auf die erste Stadt \\
+\hline
+{\em cityB} & Zeiger auf die zweite Stadt \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_street_a8a445d11dfb869969bea3b8f6e4a2edf}\index{Street@{Street}!draw@{draw}}
+\index{draw@{draw}!Street@{Street}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily \label{class_street_a8a445d11dfb869969bea3b8f6e4a2edf} 
+void Street\+::draw (\begin{DoxyParamCaption}\item[{QGraphics\+Scene \&}]{scene}{}\end{DoxyParamCaption})}
+
+
+
+Zeichnet die Straße als Linie in die Szene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene} & Die QGraphics\+Scene, in die gezeichnet wird \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_street_a64316b1ab76eb572376f47fdb3f8fcc8}\index{Street@{Street}!drawRed@{drawRed}}
+\index{drawRed@{drawRed}!Street@{Street}}
+\doxysubsubsection{\texorpdfstring{drawRed()}{drawRed()}}
+{\footnotesize\ttfamily \label{class_street_a64316b1ab76eb572376f47fdb3f8fcc8} 
+void Street\+::draw\+Red (\begin{DoxyParamCaption}\item[{QGraphics\+Scene \&}]{scene}{}\end{DoxyParamCaption})}
+
+
+
+Zeichnet die Straße als rote, breite Linie (z.\+B. für Dijkstra-\/\+Pfad). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene} & Die QGraphics\+Scene, in die gezeichnet wird \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_street_a619433865c665edc899d0a7e268ab0c3}\index{Street@{Street}!getCityA@{getCityA}}
+\index{getCityA@{getCityA}!Street@{Street}}
+\doxysubsubsection{\texorpdfstring{getCityA()}{getCityA()}}
+{\footnotesize\ttfamily \label{class_street_a619433865c665edc899d0a7e268ab0c3} 
+\mbox{\hyperlink{class_city}{City}} \texorpdfstring{$\ast$}{*} Street\+::get\+CityA (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gibt die erste Stadt zurück. 
+
+\Hypertarget{class_street_a212916ef10c9230cf13c34ff54229eaf}\index{Street@{Street}!getCityB@{getCityB}}
+\index{getCityB@{getCityB}!Street@{Street}}
+\doxysubsubsection{\texorpdfstring{getCityB()}{getCityB()}}
+{\footnotesize\ttfamily \label{class_street_a212916ef10c9230cf13c34ff54229eaf} 
+\mbox{\hyperlink{class_city}{City}} \texorpdfstring{$\ast$}{*} Street\+::get\+CityB (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gibt die zweite Stadt zurück. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_street_a74635cfcf44c75219460f4bbf769babb}\index{Street@{Street}!cityA@{cityA}}
+\index{cityA@{cityA}!Street@{Street}}
+\doxysubsubsection{\texorpdfstring{cityA}{cityA}}
+{\footnotesize\ttfamily \label{class_street_a74635cfcf44c75219460f4bbf769babb} 
+\mbox{\hyperlink{class_city}{City}}\texorpdfstring{$\ast$}{*} Street\+::cityA\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Zeiger auf die erste Stadt. 
+
+\Hypertarget{class_street_a321c9ed38f1604b439cb36614ea6f544}\index{Street@{Street}!cityB@{cityB}}
+\index{cityB@{cityB}!Street@{Street}}
+\doxysubsubsection{\texorpdfstring{cityB}{cityB}}
+{\footnotesize\ttfamily \label{class_street_a321c9ed38f1604b439cb36614ea6f544} 
+\mbox{\hyperlink{class_city}{City}}\texorpdfstring{$\ast$}{*} Street\+::cityB\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Zeiger auf die zweite Stadt. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{street_8h}{street.\+h}}\item 
+\mbox{\hyperlink{street_8cpp}{street.\+cpp}}\end{DoxyCompactItemize}

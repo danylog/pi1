@@ -1,0 +1,145 @@
+\doxysection{City Class Reference}
+\hypertarget{class_city}{}\label{class_city}\index{City@{City}}
+
+
+Die Klasse \doxylink{class_city}{City} repräsentiert eine Stadt mit Namen und Koordinaten.  
+
+
+
+
+{\ttfamily \#include $<$city.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_city_a9e29f32d33f56bdf59cba425a7e08bd8}{City}} (QString \mbox{\hyperlink{class_city_a4a5b42d915083867ea9a57a8bd1fd472}{name}}, int \mbox{\hyperlink{class_city_a218327398be6b6cee514df3513eb9ad4}{x}}, int \mbox{\hyperlink{class_city_a0db4f89473b24aa4b2735be106588b6d}{y}})
+\begin{DoxyCompactList}\small\item\em Konstruktor für eine Stadt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_city_a3d22cac343c40bf53d6bc8d831ac4262}{draw}} (QGraphics\+Scene \&scene)
+\begin{DoxyCompactList}\small\item\em Zeichnet die Stadt als Punkt und Namen in die Szene. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{class_city_ad73598d937870a165cb530958106ff07}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Gibt den Namen der Stadt zurück. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_city_af515909e9e733566a5005fdc732f608e}{getX}} () const
+\begin{DoxyCompactList}\small\item\em Gibt die X-\/\+Koordinate zurück. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_city_a9e787273ca3421eb6ed3ce9c556359d0}{getY}} () const
+\begin{DoxyCompactList}\small\item\em Gibt die Y-\/\+Koordinate zurück. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+QString \mbox{\hyperlink{class_city_a4a5b42d915083867ea9a57a8bd1fd472}{name}}
+\begin{DoxyCompactList}\small\item\em Name der Stadt. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_city_a218327398be6b6cee514df3513eb9ad4}{x}}
+\begin{DoxyCompactList}\small\item\em X-\/\+Koordinate. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_city_a0db4f89473b24aa4b2735be106588b6d}{y}}
+\begin{DoxyCompactList}\small\item\em Y-\/\+Koordinate. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Die Klasse \doxylink{class_city}{City} repräsentiert eine Stadt mit Namen und Koordinaten. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_city_a9e29f32d33f56bdf59cba425a7e08bd8}\index{City@{City}!City@{City}}
+\index{City@{City}!City@{City}}
+\doxysubsubsection{\texorpdfstring{City()}{City()}}
+{\footnotesize\ttfamily \label{class_city_a9e29f32d33f56bdf59cba425a7e08bd8} 
+City\+::\+City (\begin{DoxyParamCaption}\item[{QString}]{name}{, }\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Konstruktor für eine Stadt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name der Stadt \\
+\hline
+{\em x} & X-\/\+Koordinate \\
+\hline
+{\em y} & Y-\/\+Koordinate \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_city_a3d22cac343c40bf53d6bc8d831ac4262}\index{City@{City}!draw@{draw}}
+\index{draw@{draw}!City@{City}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily \label{class_city_a3d22cac343c40bf53d6bc8d831ac4262} 
+void City\+::draw (\begin{DoxyParamCaption}\item[{QGraphics\+Scene \&}]{scene}{}\end{DoxyParamCaption})}
+
+
+
+Zeichnet die Stadt als Punkt und Namen in die Szene. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em scene} & Die QGraphics\+Scene, in die gezeichnet wird \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_city_ad73598d937870a165cb530958106ff07}\index{City@{City}!getName@{getName}}
+\index{getName@{getName}!City@{City}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily \label{class_city_ad73598d937870a165cb530958106ff07} 
+QString City\+::get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gibt den Namen der Stadt zurück. 
+
+\Hypertarget{class_city_af515909e9e733566a5005fdc732f608e}\index{City@{City}!getX@{getX}}
+\index{getX@{getX}!City@{City}}
+\doxysubsubsection{\texorpdfstring{getX()}{getX()}}
+{\footnotesize\ttfamily \label{class_city_af515909e9e733566a5005fdc732f608e} 
+int City\+::getX (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gibt die X-\/\+Koordinate zurück. 
+
+\Hypertarget{class_city_a9e787273ca3421eb6ed3ce9c556359d0}\index{City@{City}!getY@{getY}}
+\index{getY@{getY}!City@{City}}
+\doxysubsubsection{\texorpdfstring{getY()}{getY()}}
+{\footnotesize\ttfamily \label{class_city_a9e787273ca3421eb6ed3ce9c556359d0} 
+int City\+::getY (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gibt die Y-\/\+Koordinate zurück. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_city_a4a5b42d915083867ea9a57a8bd1fd472}\index{City@{City}!name@{name}}
+\index{name@{name}!City@{City}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily \label{class_city_a4a5b42d915083867ea9a57a8bd1fd472} 
+QString City\+::name\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Name der Stadt. 
+
+\Hypertarget{class_city_a218327398be6b6cee514df3513eb9ad4}\index{City@{City}!x@{x}}
+\index{x@{x}!City@{City}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily \label{class_city_a218327398be6b6cee514df3513eb9ad4} 
+int City\+::x\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+X-\/\+Koordinate. 
+
+\Hypertarget{class_city_a0db4f89473b24aa4b2735be106588b6d}\index{City@{City}!y@{y}}
+\index{y@{y}!City@{City}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily \label{class_city_a0db4f89473b24aa4b2735be106588b6d} 
+int City\+::y\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Y-\/\+Koordinate. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{city_8h}{city.\+h}}\item 
+\mbox{\hyperlink{city_8cpp}{city.\+cpp}}\end{DoxyCompactItemize}

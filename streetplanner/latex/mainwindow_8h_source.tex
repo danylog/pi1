@@ -1,0 +1,74 @@
+\doxysection{mainwindow.\+h}
+\hypertarget{mainwindow_8h_source}{}\label{mainwindow_8h_source}\mbox{\hyperlink{mainwindow_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ MAINWINDOW\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ MAINWINDOW\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QMainWindow>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QGraphicsScene>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{map_8h}{map.h}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{mapionrw_8h}{mapionrw.h}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{00015\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ui}{Ui}}}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ui_1_1_main_window}{MainWindow}};}
+\DoxyCodeLine{00018\ \}}
+\DoxyCodeLine{00019\ QT\_END\_NAMESPACE}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00024\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{MainWindow}}\ :\ \textcolor{keyword}{public}\ QMainWindow}
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{MainWindow}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{\string~MainWindow}}();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a4de79c63c7fa0b8d7c468ac71f20be81}{on\_pushButton\_clicked}}();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a5b278385cd01d4980afc6bf419ccb47d}{on\_lineEdit\_eingabe\_editingFinished}}();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_ab4487c4b02224acd4a0193d38b704ddb}{on\_actionExit\_triggered}}();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a1135e68678922defd95d5fc0404771fa}{on\_actionClear\_Scene\_triggered}}();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a53af19c6490bf571b537fba08a9453f8}{on\_actionUeber\_uns\_triggered}}();}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_ae0e46dc3da4ee07bf66e73e20300220c}{on\_pushButton\_2\_clicked}}();}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a12cf88402a93adef89645ba4e4cb7be1}{on\_pushButton\_3\_clicked}}();}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_ae80a036ef40bb6ac0165471f71fef287}{on\_pushButton\_4\_clicked}}();}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a605071d51753ec2a516cbf9b761d3ea3}{testAbstractMap}}();}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a008fea9a9dfe8236e3b768b2113bb21e}{on\_checkBox\_clicked}}(\textcolor{keywordtype}{bool}\ checked);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_aab86c5aae6062151b03df99bc416710d}{on\_pushButton\_newCity\_clicked}}();}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a9d346a04c520cc3403bdce0c1e36535e}{on\_fillMap\_clicked}}();}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_acf8b634afabed9b3dd6cb8351c77bb1f}{on\_pushButton\_testAbstractMap\_clicked}}();}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_aa6e1a6d059d90db3ac8a0c15360954d0}{on\_pushButton\_testDijkstra\_clicked}}();}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a5677e5be1a8cf54c442cf4a285db7233}{on\_pushButton\_6\_clicked}}();}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_afe47d292482dc3e616cf88535a4c5466}{on\_pushButton\_newStreet\_clicked}}();}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_ab3622380204e3a191df349b669000503}{updateCityComboBoxes}}();}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00075\ \ \ \ \ \mbox{\hyperlink{class_ui_1_1_main_window}{Ui::MainWindow}}\ *\mbox{\hyperlink{class_main_window_a35466a70ed47252a0191168126a352a5}{ui}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00076\ \ \ \ \ QGraphicsScene\ *\mbox{\hyperlink{class_main_window_a51ac2b126495216832501cea3929c6f6}{scene}};\ \ \ \ }
+\DoxyCodeLine{00077\ \ \ \ \ \mbox{\hyperlink{class_map}{Map}}\ \mbox{\hyperlink{class_main_window_a02ede2e87fe1cd48c810c4d1c0abc5ad}{map}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00078\ \ \ \ \ \mbox{\hyperlink{class_city}{City}}\ *\mbox{\hyperlink{class_main_window_a17bf9e902dae0ea0c94cc32176eece71}{lastCity}}\ =\ \textcolor{keyword}{nullptr};\ }
+\DoxyCodeLine{00079\ \ \ \ \ \mbox{\hyperlink{class_map_io}{MapIo}}\ *\mbox{\hyperlink{class_main_window_a36b3a63ef2a48441810389af39c3bcbb}{mapIo}}\ =\ \textcolor{keyword}{nullptr};\ \ \ }
+\DoxyCodeLine{00080\ \};}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MAINWINDOW\_H}}
+
+\end{DoxyCode}
