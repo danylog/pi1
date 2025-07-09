@@ -17,8 +17,8 @@ addcitydialog::~addcitydialog()
 City *addcitydialog::createCityFromInput(QStringList &connections) const
 {
     QString name = ui->lineEditName->text();
-    int x = ui->spinBoxX->value(); // Wert aus SpinBox
-    int y = ui->spinBoxY->value(); // Wert aus SpinBox
+    int x = ui->spinBoxX->value();
+    int y = ui->spinBoxY->value();
     QString connStr = ui->lineEditConnections->text();
     connections = connStr.split(",", Qt::SkipEmptyParts);
     for (QString &c : connections)

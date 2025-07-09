@@ -1,8 +1,9 @@
 /*!
- * Praktikum Informatik 1 
- * 
+ * Praktikum Informatik 1
+ *
  *
  * @file Person.h
+ * @brief Deklaration der Klasse Person
  */
 
 #ifndef Person_H_
@@ -14,22 +15,15 @@
 /*!
  * @brief Klasse Person
  *
- * Die Klasse Person speichert alle relevanten Informationenen einer Person ab,
- * die für die Bücherei relevant sind, dies beinhaltet:
- *  - Name
- *  - Geburtsdatum
- *
+ * Speichert Name und Geburtsdatum einer Person.
  */
 class Person
 {
 public:
     /*!
      * @brief Konstruktor
-     *
-     * Konstruktor der Klasse Person
-     *
-     * \param std::string name: Name der Person, Default-Value ist ein leerer String
-     * \param Datum initGeburtsdatum: Geburtsdatum der Person, Default-Value ist das aktuelle Datum
+     * @param initName Name der Person (optional)
+     * @param initGeburtsdatum Geburtsdatum der Person (optional)
      */
     Person(std::string initName = "", Datum initGeburtsdatum = Datum());
 
@@ -39,23 +33,20 @@ public:
     ~Person();
 
     /*!
-     * @brief Zugriffsfunktion auf den Namen der Person
-     *
-     * \return std::string: gibt den Namen der Person zurück
+     * @brief Gibt den Namen der Person zurÃ¼ck
+     * @return Name der Person
      */
     std::string getName() const;
 
     /*!
-     * @brief Zugriffsfunktion auf das Geburtsdatum der Person
-     *
-     * \return Datum: gibt das Geburtsdautm der Person zurück
+     * @brief Gibt das Geburtsdatum der Person zurÃ¼ck
+     * @return Geburtsdatum der Person
      */
     Datum getGeburtsdatum() const;
 
 private:
-    std::string name;
-    Datum geburtsdatum;
+    std::string name;   ///< Name der Person
+    Datum geburtsdatum; ///< Geburtsdatum der Person
 };
 
 #endif
-

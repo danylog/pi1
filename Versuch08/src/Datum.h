@@ -109,8 +109,8 @@ private:
  * \param std::ostream& out: Argument auf der linken Seite des Operators
  * \param const Datum& d: Argument auf der rechten Seite des Operators
  *
- * \return std::ostream&: R�ckgabe des Streams auf den das Datum geschrieben wurde
- */
+ * @param in Eingabestream
+ * @param d Datum
 std::ostream &operator<<(std::ostream &out, const Datum &d);
 
 /*!

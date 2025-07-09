@@ -1,3 +1,8 @@
+/**
+ * @file addstreetdialog.h
+ * @brief Dialog zum Hinzufügen einer Straße zwischen zwei Städten.
+ */
+
 #ifndef ADDSTREETDIALOG_H
 #define ADDSTREETDIALOG_H
 
@@ -8,6 +13,9 @@ namespace Ui
     class addstreetdialog;
 }
 
+/**
+ * @brief Dialogfenster zum Hinzufügen einer Straße.
+ */
 class addstreetdialog : public QDialog
 {
     Q_OBJECT
@@ -16,9 +24,20 @@ public:
     explicit addstreetdialog(QWidget *parent = nullptr);
     ~addstreetdialog();
 
+    /**
+     * @brief Gibt den Namen der ersten Stadt zurück.
+     */
     QString getCityAName() const;
+
+    /**
+     * @brief Gibt den Namen der zweiten Stadt zurück.
+     */
     QString getCityBName() const;
-    void setCityList(const QStringList &cityNames); // Neu!
+
+    /**
+     * @brief Setzt die Liste der Städtenamen für die Auswahl.
+     */
+    void setCityList(const QStringList &cityNames);
 
 private:
     Ui::addstreetdialog *ui;

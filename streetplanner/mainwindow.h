@@ -1,3 +1,8 @@
+/**
+ * @file mainwindow.h
+ * @brief Definiert das Hauptfenster der Anwendung StreetPlanner.
+ */
+
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
@@ -13,12 +18,22 @@ namespace Ui
 }
 QT_END_NAMESPACE
 
+/**
+ * @brief Die Klasse MainWindow stellt das Hauptfenster der Anwendung dar.
+ */
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
+    /**
+     * @brief Konstruktor für das Hauptfenster.
+     */
     MainWindow(QWidget *parent = nullptr);
+
+    /**
+     * @brief Destruktor.
+     */
     ~MainWindow();
 
 private slots:
@@ -57,10 +72,10 @@ private slots:
     void updateCityComboBoxes();
 
 private:
-    Ui::MainWindow *ui;
-    QGraphicsScene *scene;
-    Map map;
-    City *lastCity = nullptr;
-    MapIo *mapIo = nullptr; // <--- MapIo-Zeiger als Attribut
+    Ui::MainWindow *ui;       ///< Benutzeroberfläche
+    QGraphicsScene *scene;    ///< Szene für die grafische Darstellung
+    Map map;                  ///< Die Karte mit Städten und Straßen
+    City *lastCity = nullptr; ///< Letzte hinzugefügte Stadt
+    MapIo *mapIo = nullptr;   ///< Datenquelle für Karten
 };
 #endif // MAINWINDOW_H

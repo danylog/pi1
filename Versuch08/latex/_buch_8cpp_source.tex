@@ -1,0 +1,35 @@
+\doxysection{Buch.\+cpp}
+\hypertarget{_buch_8cpp_source}{}\label{_buch_8cpp_source}\index{src/Buch.cpp@{src/Buch.cpp}}
+\mbox{\hyperlink{_buch_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_buch_8cpp_source_l00001}00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{_buch_8cpp_source_l00002}00002\ \textcolor{comment}{\ *\ Buch.cpp}}
+\DoxyCodeLine{\Hypertarget{_buch_8cpp_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{_buch_8cpp_source_l00004}00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Jun\ 1,\ 2025}}
+\DoxyCodeLine{\Hypertarget{_buch_8cpp_source_l00005}00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ danylo}}
+\DoxyCodeLine{\Hypertarget{_buch_8cpp_source_l00006}00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{_buch_8cpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_buch_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_buch_8h}{Buch.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_buch_8cpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{_buch_8cpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_buch_8cpp_source_l00011}00011\ \textcolor{comment}{//\ Konstruktor:\ ruft\ explizit\ den\ Konstruktor\ der\ Basisklasse\ Medium\ auf}}
+\DoxyCodeLine{\Hypertarget{_buch_8cpp_source_l00012}\mbox{\hyperlink{class_buch_aabc82930f1e38ca1bf4be15cb5681d81}{00012}}\ \mbox{\hyperlink{class_buch_aabc82930f1e38ca1bf4be15cb5681d81}{Buch::Buch}}(std::string\ initTitel,\ std::string\ initAutor)}
+\DoxyCodeLine{\Hypertarget{_buch_8cpp_source_l00013}00013\ \ \ \ \ :\ \mbox{\hyperlink{class_medium_aa8bd867d2e3644022a117433e3321f18}{Medium}}(initTitel),\ \mbox{\hyperlink{class_buch_a5ed19f7fe13d2bd4362583f9c968f9e4}{autor}}(initAutor)}
+\DoxyCodeLine{\Hypertarget{_buch_8cpp_source_l00014}00014\ \{}
+\DoxyCodeLine{\Hypertarget{_buch_8cpp_source_l00015}00015\ \}}
+\DoxyCodeLine{\Hypertarget{_buch_8cpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_buch_8cpp_source_l00017}00017\ \textcolor{comment}{//\ Destruktor}}
+\DoxyCodeLine{\Hypertarget{_buch_8cpp_source_l00018}\mbox{\hyperlink{class_buch_a7319752a18541585f6f9bed0cf9ed7e6}{00018}}\ \mbox{\hyperlink{class_buch_a7319752a18541585f6f9bed0cf9ed7e6}{Buch::\string~Buch}}()}
+\DoxyCodeLine{\Hypertarget{_buch_8cpp_source_l00019}00019\ \{}
+\DoxyCodeLine{\Hypertarget{_buch_8cpp_source_l00020}00020\ \}}
+\DoxyCodeLine{\Hypertarget{_buch_8cpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{_buch_8cpp_source_l00022}00022\ \textcolor{comment}{//\ Überschriebene\ Ausgabefunktion}}
+\DoxyCodeLine{\Hypertarget{_buch_8cpp_source_l00023}\mbox{\hyperlink{class_buch_a346e8acd888f5293dc3ec80593443a4d}{00023}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_buch_a346e8acd888f5293dc3ec80593443a4d}{Buch::ausgabe}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_buch_8cpp_source_l00024}00024\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_buch_8cpp_source_l00025}00025\ \ \ \ \ \textcolor{comment}{//\ Ausgabe\ der\ Basisklasse\ aufrufen}}
+\DoxyCodeLine{\Hypertarget{_buch_8cpp_source_l00026}00026\ \ \ \ \ \mbox{\hyperlink{class_medium_a4ef72a6165d29497d26d0825a0f3b486}{Medium::ausgabe}}();}
+\DoxyCodeLine{\Hypertarget{_buch_8cpp_source_l00027}00027\ \ \ \ \ \textcolor{comment}{//\ Zusätzlich\ den\ Autor\ ausgeben}}
+\DoxyCodeLine{\Hypertarget{_buch_8cpp_source_l00028}00028\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Autor:\ "{}}\ <<\ \mbox{\hyperlink{class_buch_a5ed19f7fe13d2bd4362583f9c968f9e4}{autor}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_buch_8cpp_source_l00029}00029\ \}}
+
+\end{DoxyCode}

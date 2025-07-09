@@ -1,0 +1,161 @@
+\doxysection{src/\+Buecherei.cpp File Reference}
+\hypertarget{_buecherei_8cpp}{}\label{_buecherei_8cpp}\index{src/Buecherei.cpp@{src/Buecherei.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include "{}Medium.\+h"{}}\newline
+{\ttfamily \#include "{}Datum.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_buecherei_8cpp_a308860efc1fb01cd92de40b298ce77b5}{UNTERKLASSENVORHANDEN}}~true
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_buecherei_8cpp_af37aa5aa9947bb586f5111438758cb1e}{fuelle\+Datenbank}} (std\+::vector$<$ \mbox{\hyperlink{class_medium}{Medium}} \texorpdfstring{$\ast$}{*} $>$ \&medien)
+\item 
+void \mbox{\hyperlink{_buecherei_8cpp_a6dd1350855e9da23ad6b71e8da306caf}{medium\+Hinzufuegen}} (std\+::vector$<$ \mbox{\hyperlink{class_medium}{Medium}} \texorpdfstring{$\ast$}{*} $>$ \&medien)
+\item 
+void \mbox{\hyperlink{_buecherei_8cpp_a3e18c8125db6ee4b2dd2b50bda67eb1c}{medium\+Entfernen}} (std\+::vector$<$ \mbox{\hyperlink{class_medium}{Medium}} \texorpdfstring{$\ast$}{*} $>$ \&medien)
+\item 
+void \mbox{\hyperlink{_buecherei_8cpp_a1934545954cce69b2b45748b6c3b532e}{medium\+Ausleihen}} (std\+::vector$<$ \mbox{\hyperlink{class_medium}{Medium}} \texorpdfstring{$\ast$}{*} $>$ \&medien, \mbox{\hyperlink{class_datum}{Datum}} aktuelles\+Datum)
+\item 
+void \mbox{\hyperlink{_buecherei_8cpp_aa31d79ad55606d9d0de0a44c2c3d5acc}{medium\+Zurueckgeben}} (std\+::vector$<$ \mbox{\hyperlink{class_medium}{Medium}} \texorpdfstring{$\ast$}{*} $>$ \&medien)
+\item 
+void \mbox{\hyperlink{_buecherei_8cpp_ae2a5c111db3eaebca41620ded295997f}{alle\+Medien\+Ausgeben}} (std\+::vector$<$ \mbox{\hyperlink{class_medium}{Medium}} \texorpdfstring{$\ast$}{*} $>$ \&medien)
+\item 
+void \mbox{\hyperlink{_buecherei_8cpp_aeafda249c0c002f183fe90b7a3ae25fd}{ausgeliehene\+Medien\+Ausgeben}} (const std\+::vector$<$ \mbox{\hyperlink{class_medium}{Medium}} \texorpdfstring{$\ast$}{*} $>$ \&medien)
+\item 
+int \mbox{\hyperlink{_buecherei_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_buecherei_8cpp_a308860efc1fb01cd92de40b298ce77b5}\index{Buecherei.cpp@{Buecherei.cpp}!UNTERKLASSENVORHANDEN@{UNTERKLASSENVORHANDEN}}
+\index{UNTERKLASSENVORHANDEN@{UNTERKLASSENVORHANDEN}!Buecherei.cpp@{Buecherei.cpp}}
+\doxysubsubsection{\texorpdfstring{UNTERKLASSENVORHANDEN}{UNTERKLASSENVORHANDEN}}
+{\footnotesize\ttfamily \label{_buecherei_8cpp_a308860efc1fb01cd92de40b298ce77b5} 
+\#define UNTERKLASSENVORHANDEN~true}
+
+Praktikum Informatik 1 MMXXV
+
+@ file \doxylink{_buecherei_8cpp}{Buecherei.\+cpp} 
+
+Definition at line \mbox{\hyperlink{_buecherei_8cpp_source_l00020}{20}} of file \mbox{\hyperlink{_buecherei_8cpp_source}{Buecherei.\+cpp}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_buecherei_8cpp_ae2a5c111db3eaebca41620ded295997f}\index{Buecherei.cpp@{Buecherei.cpp}!alleMedienAusgeben@{alleMedienAusgeben}}
+\index{alleMedienAusgeben@{alleMedienAusgeben}!Buecherei.cpp@{Buecherei.cpp}}
+\doxysubsubsection{\texorpdfstring{alleMedienAusgeben()}{alleMedienAusgeben()}}
+{\footnotesize\ttfamily \label{_buecherei_8cpp_ae2a5c111db3eaebca41620ded295997f} 
+void alle\+Medien\+Ausgeben (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_medium}{Medium}} \texorpdfstring{$\ast$}{*} $>$ \&}]{medien}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_buecherei_8cpp_source_l00414}{414}} of file \mbox{\hyperlink{_buecherei_8cpp_source}{Buecherei.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_buecherei_8cpp_source_l00051}{main()}}.
+
+\Hypertarget{_buecherei_8cpp_aeafda249c0c002f183fe90b7a3ae25fd}\index{Buecherei.cpp@{Buecherei.cpp}!ausgelieheneMedienAusgeben@{ausgelieheneMedienAusgeben}}
+\index{ausgelieheneMedienAusgeben@{ausgelieheneMedienAusgeben}!Buecherei.cpp@{Buecherei.cpp}}
+\doxysubsubsection{\texorpdfstring{ausgelieheneMedienAusgeben()}{ausgelieheneMedienAusgeben()}}
+{\footnotesize\ttfamily \label{_buecherei_8cpp_aeafda249c0c002f183fe90b7a3ae25fd} 
+void ausgeliehene\+Medien\+Ausgeben (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{class_medium}{Medium}} \texorpdfstring{$\ast$}{*} $>$ \&}]{medien}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_buecherei_8cpp_source_l00429}{429}} of file \mbox{\hyperlink{_buecherei_8cpp_source}{Buecherei.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_buecherei_8cpp_source_l00051}{main()}}.
+
+\Hypertarget{_buecherei_8cpp_af37aa5aa9947bb586f5111438758cb1e}\index{Buecherei.cpp@{Buecherei.cpp}!fuelleDatenbank@{fuelleDatenbank}}
+\index{fuelleDatenbank@{fuelleDatenbank}!Buecherei.cpp@{Buecherei.cpp}}
+\doxysubsubsection{\texorpdfstring{fuelleDatenbank()}{fuelleDatenbank()}}
+{\footnotesize\ttfamily \label{_buecherei_8cpp_af37aa5aa9947bb586f5111438758cb1e} 
+void fuelle\+Datenbank (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_medium}{Medium}} \texorpdfstring{$\ast$}{*} $>$ \&}]{medien}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_buecherei_8cpp_source_l00164}{164}} of file \mbox{\hyperlink{_buecherei_8cpp_source}{Buecherei.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_buecherei_8cpp_source_l00051}{main()}}.
+
+\Hypertarget{_buecherei_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{Buecherei.cpp@{Buecherei.cpp}!main@{main}}
+\index{main@{main}!Buecherei.cpp@{Buecherei.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{_buecherei_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_buecherei_8cpp_source_l00051}{51}} of file \mbox{\hyperlink{_buecherei_8cpp_source}{Buecherei.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{_buecherei_8cpp_source_l00414}{alle\+Medien\+Ausgeben()}}, \mbox{\hyperlink{_buecherei_8cpp_source_l00429}{ausgeliehene\+Medien\+Ausgeben()}}, \mbox{\hyperlink{_buecherei_8cpp_source_l00164}{fuelle\+Datenbank()}}, \mbox{\hyperlink{_buecherei_8cpp_source_l00345}{medium\+Ausleihen()}}, \mbox{\hyperlink{_buecherei_8cpp_source_l00313}{medium\+Entfernen()}}, \mbox{\hyperlink{_buecherei_8cpp_source_l00205}{medium\+Hinzufuegen()}}, and \mbox{\hyperlink{_buecherei_8cpp_source_l00386}{medium\+Zurueckgeben()}}.
+
+\Hypertarget{_buecherei_8cpp_a1934545954cce69b2b45748b6c3b532e}\index{Buecherei.cpp@{Buecherei.cpp}!mediumAusleihen@{mediumAusleihen}}
+\index{mediumAusleihen@{mediumAusleihen}!Buecherei.cpp@{Buecherei.cpp}}
+\doxysubsubsection{\texorpdfstring{mediumAusleihen()}{mediumAusleihen()}}
+{\footnotesize\ttfamily \label{_buecherei_8cpp_a1934545954cce69b2b45748b6c3b532e} 
+void medium\+Ausleihen (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_medium}{Medium}} \texorpdfstring{$\ast$}{*} $>$ \&}]{medien}{, }\item[{\mbox{\hyperlink{class_datum}{Datum}}}]{aktuelles\+Datum}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_buecherei_8cpp_source_l00345}{345}} of file \mbox{\hyperlink{_buecherei_8cpp_source}{Buecherei.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_buecherei_8cpp_source_l00051}{main()}}.
+
+\Hypertarget{_buecherei_8cpp_a3e18c8125db6ee4b2dd2b50bda67eb1c}\index{Buecherei.cpp@{Buecherei.cpp}!mediumEntfernen@{mediumEntfernen}}
+\index{mediumEntfernen@{mediumEntfernen}!Buecherei.cpp@{Buecherei.cpp}}
+\doxysubsubsection{\texorpdfstring{mediumEntfernen()}{mediumEntfernen()}}
+{\footnotesize\ttfamily \label{_buecherei_8cpp_a3e18c8125db6ee4b2dd2b50bda67eb1c} 
+void medium\+Entfernen (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_medium}{Medium}} \texorpdfstring{$\ast$}{*} $>$ \&}]{medien}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_buecherei_8cpp_source_l00313}{313}} of file \mbox{\hyperlink{_buecherei_8cpp_source}{Buecherei.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_buecherei_8cpp_source_l00051}{main()}}.
+
+\Hypertarget{_buecherei_8cpp_a6dd1350855e9da23ad6b71e8da306caf}\index{Buecherei.cpp@{Buecherei.cpp}!mediumHinzufuegen@{mediumHinzufuegen}}
+\index{mediumHinzufuegen@{mediumHinzufuegen}!Buecherei.cpp@{Buecherei.cpp}}
+\doxysubsubsection{\texorpdfstring{mediumHinzufuegen()}{mediumHinzufuegen()}}
+{\footnotesize\ttfamily \label{_buecherei_8cpp_a6dd1350855e9da23ad6b71e8da306caf} 
+void medium\+Hinzufuegen (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_medium}{Medium}} \texorpdfstring{$\ast$}{*} $>$ \&}]{medien}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_buecherei_8cpp_source_l00205}{205}} of file \mbox{\hyperlink{_buecherei_8cpp_source}{Buecherei.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_buecherei_8cpp_source_l00051}{main()}}.
+
+\Hypertarget{_buecherei_8cpp_aa31d79ad55606d9d0de0a44c2c3d5acc}\index{Buecherei.cpp@{Buecherei.cpp}!mediumZurueckgeben@{mediumZurueckgeben}}
+\index{mediumZurueckgeben@{mediumZurueckgeben}!Buecherei.cpp@{Buecherei.cpp}}
+\doxysubsubsection{\texorpdfstring{mediumZurueckgeben()}{mediumZurueckgeben()}}
+{\footnotesize\ttfamily \label{_buecherei_8cpp_aa31d79ad55606d9d0de0a44c2c3d5acc} 
+void medium\+Zurueckgeben (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_medium}{Medium}} \texorpdfstring{$\ast$}{*} $>$ \&}]{medien}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_buecherei_8cpp_source_l00386}{386}} of file \mbox{\hyperlink{_buecherei_8cpp_source}{Buecherei.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{_buecherei_8cpp_source_l00051}{main()}}.
+

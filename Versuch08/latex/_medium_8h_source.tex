@@ -1,0 +1,50 @@
+\doxysection{Medium.\+h}
+\hypertarget{_medium_8h_source}{}\label{_medium_8h_source}\index{src/Medium.h@{src/Medium.h}}
+\mbox{\hyperlink{_medium_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00008}00008\ \textcolor{preprocessor}{\#ifndef\ MEDIUM\_H\_}}
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00009}00009\ \textcolor{preprocessor}{\#define\ MEDIUM\_H\_}}
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_datum_8h}{Datum.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_person_8h}{Person.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00019}\mbox{\hyperlink{class_medium}{00019}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_medium_aa8bd867d2e3644022a117433e3321f18}{Medium}}}
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00020}00020\ \{}
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00021}00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00029}00029\ \ \ \ \ \mbox{\hyperlink{class_medium_aa8bd867d2e3644022a117433e3321f18}{Medium}}(std::string\ initTitel);}
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00034}00034\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_medium_a77264993251b16f49de7cfc2a079eae2}{\string~Medium}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00041}00041\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_medium_a4ef72a6165d29497d26d0825a0f3b486}{ausgabe}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00052}00052\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_medium_a98261c5da2a63906799f298cbbcd66b8}{ausleihen}}(\mbox{\hyperlink{class_person}{Person}}\ person,\ \mbox{\hyperlink{class_datum}{Datum}}\ ausleihdatum);}
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00057}00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_medium_a243e7659e4c9596061a5d5805ae271c4}{zurueckgeben}}();}
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00064}00064\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_medium_a7bc65e286218957af48211f6ace30789}{getID}}();}
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00072}\mbox{\hyperlink{class_medium_a01b63f353df4a852691f3585e45e8c84}{00072}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_medium_a01b63f353df4a852691f3585e45e8c84}{istAusgeliehen}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_medium_a41d79c1b3b57a54c8b372a8e36f1b5c9}{status}};\ \}}
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00074}00074\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00078}\mbox{\hyperlink{class_medium_ac48d0988284d67e8bdf54b8fab9ebbe8}{00078}}\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_medium_ac48d0988284d67e8bdf54b8fab9ebbe8}{currentID}};}
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00083}\mbox{\hyperlink{class_medium_a5e72a311f06810444cde614ddbc4b31f}{00083}}\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_medium_a5e72a311f06810444cde614ddbc4b31f}{ID}};}
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00088}\mbox{\hyperlink{class_medium_ab76783269f8b09141d7b2168b008429d}{00088}}\ \ \ \ \ std::string\ \mbox{\hyperlink{class_medium_ab76783269f8b09141d7b2168b008429d}{titel}};}
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00093}\mbox{\hyperlink{class_medium_a41d79c1b3b57a54c8b372a8e36f1b5c9}{00093}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_medium_a41d79c1b3b57a54c8b372a8e36f1b5c9}{status}};}
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00098}\mbox{\hyperlink{class_medium_af7a2605566e899641b075f51893948c7}{00098}}\ \ \ \ \ \mbox{\hyperlink{class_datum}{Datum}}\ \mbox{\hyperlink{class_medium_af7a2605566e899641b075f51893948c7}{datumAusgeliehen}};}
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00103}\mbox{\hyperlink{class_medium_a2dcfa7b252fea996b5cb6551f735f252}{00103}}\ \ \ \ \ \mbox{\hyperlink{class_person}{Person}}\ \mbox{\hyperlink{class_medium_a2dcfa7b252fea996b5cb6551f735f252}{personAusgeliehen}};}
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00104}00104\ \};}
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00115}00115\ std::ostream\ \&\mbox{\hyperlink{_medium_8h_ac8d95950f85d491efc083e1c446e75e0}{operator<<}}(std::ostream\ \&out,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_medium}{Medium}}\ \&medium);}
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{_medium_8h_source_l00117}00117\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

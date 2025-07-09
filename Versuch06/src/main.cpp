@@ -5,14 +5,29 @@
 #include <algorithm> // für sort und find
 #include "Student.h"
 
+/**
+ * @file main.cpp
+ * @brief Hauptprogramm zur Verwaltung einer Studierendenliste.
+ *
+ * Das Programm ermöglicht das Einlesen, Ausgeben, Sortieren, Löschen und Speichern von Studierendendaten
+ * mithilfe eines Vektors und der Standardbibliothek.
+ */
+
+/**
+ * @brief Hauptfunktion des Programms.
+ *
+ * Zeigt ein Menü zur Verwaltung von Studierendendaten an und führt die gewählte Aktion aus.
+ *
+ * @return int Rückgabewert des Programms (0 bei regulärem Programmende)
+ */
 int main()
 {
-    std::vector<Student> studenten;
+    std::vector<Student> studenten; ///< Vektor zur Speicherung der Studierenden
 
     int auswahl;
     do
     {
-        std::cout << "\nMenü:\n";
+        std::cout << "\nMenue:\n";
         std::cout << "1. Vorwaerts ausgeben\n";
         std::cout << "2. Rueckwaerts ausgeben\n";
         std::cout << "3. Datenelement vorne loeschen\n";
@@ -27,16 +42,25 @@ int main()
         switch (auswahl)
         {
         case 1:
-            std::cout << "Vorwärts:" << std::endl;
-            for (const auto& s : studenten)
+            /**
+             * @brief Gibt alle Studierenden vorwärts aus.
+             */
+            std::cout << "Vorwaerts:" << std::endl;
+            for (const auto &s : studenten)
                 std::cout << s << std::endl;
             break;
         case 2:
-            std::cout << "Rückwärts:" << std::endl;
+            /**
+             * @brief Gibt alle Studierenden rückwärts aus.
+             */
+            std::cout << "Rueckwaerts:" << std::endl;
             for (auto rit = studenten.rbegin(); rit != studenten.rend(); ++rit)
                 std::cout << *rit << std::endl;
             break;
         case 3:
+            /**
+             * @brief Löscht das erste Element der Liste.
+             */
             if (!studenten.empty())
             {
                 studenten.erase(studenten.begin());
@@ -49,6 +73,11 @@ int main()
             break;
         case 4:
         {
+            /**
+             * @brief Liest Studierendendaten aus einer Datei ein.
+             *
+             * Vorherige Daten werden gelöscht.
+             */
             std::string dateiname;
             std::cout << "Dateiname zum Einlesen: ";
             std::cin >> dateiname;
@@ -56,7 +85,7 @@ int main()
             std::ifstream datei(dateiname);
             if (!datei)
             {
-                std::cout << "Datei konnte nicht geöffnet werden!" << std::endl;
+                std::cout << "Datei konnte nicht geoeffnet werden!" << std::endl;
                 break;
             }
 
@@ -78,19 +107,23 @@ int main()
         }
         case 5:
         {
+            /**
+             * @brief Löscht einen Studenten anhand der Matrikelnummer.
+             */
             std::string matrikel;
-            std::cout << "Matrikelnummer des zu löschenden Studenten: ";
+            std::cout << "Matrikelnummer des zu loeschenden Studenten: ";
             std::cin >> matrikel;
 
             auto it = std::find_if(studenten.begin(), studenten.end(),
-                [&matrikel](const Student& s) { return s.matrikelnummer == matrikel; });
+                                   [&matrikel](const Student &s)
+                                   { return s.matrikelnummer == matrikel; });
 
             if (it != studenten.end())
             {
                 std::cout << "Gefundener Student: " << *it << std::endl;
                 studenten.erase(it);
-                std::cout << "Student wurde gelöscht. Verbleibende Studenten:" << std::endl;
-                for (const auto& s : studenten)
+                std::cout << "Student wurde geloescht. Verbleibende Studenten:" << std::endl;
+                for (const auto &s : studenten)
                     std::cout << s << std::endl;
             }
             else
@@ -100,13 +133,21 @@ int main()
             break;
         }
         case 6:
+            /**
+             * @brief Sortiert die Studierendenliste.
+             */
             std::sort(studenten.begin(), studenten.end());
             std::cout << "Liste wurde sortiert:" << std::endl;
-            for (const auto& s : studenten)
+            for (const auto &s : studenten)
                 std::cout << s << std::endl;
             break;
         case 7:
         {
+            /**
+             * @brief Speichert die Studierendendaten in eine Datei.
+             *
+             * Überschreibt die Datei, falls sie bereits existiert.
+             */
             std::string dateiname;
             std::cout << "Dateiname zum Speichern: ";
             std::cin >> dateiname;
@@ -118,7 +159,7 @@ int main()
                 break;
             }
 
-            for (const auto& s : studenten)
+            for (const auto &s : studenten)
             {
                 datei << s.matrikelnummer << std::endl;
                 datei << s.name << std::endl;
@@ -129,6 +170,9 @@ int main()
             break;
         }
         case 0:
+            /**
+             * @brief Beendet das Programm.
+             */
             std::cout << "Programm beendet." << std::endl;
             break;
         default:

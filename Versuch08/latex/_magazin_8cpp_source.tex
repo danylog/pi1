@@ -1,0 +1,38 @@
+\doxysection{Magazin.\+cpp}
+\hypertarget{_magazin_8cpp_source}{}\label{_magazin_8cpp_source}\index{src/Magazin.cpp@{src/Magazin.cpp}}
+\mbox{\hyperlink{_magazin_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_magazin_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_magazin_8h}{Magazin.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_magazin_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{_magazin_8cpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_magazin_8cpp_source_l00004}\mbox{\hyperlink{class_magazin_a6397156e7ce7dd671032248794131f23}{00004}}\ \mbox{\hyperlink{class_magazin_a6397156e7ce7dd671032248794131f23}{Magazin::Magazin}}(std::string\ initTitel,\ \mbox{\hyperlink{class_datum}{Datum}}\ initDatumAusgabe,\ std::string\ initSparte)}
+\DoxyCodeLine{\Hypertarget{_magazin_8cpp_source_l00005}00005\ \ \ \ \ :\ \mbox{\hyperlink{class_medium_aa8bd867d2e3644022a117433e3321f18}{Medium}}(initTitel),\ \mbox{\hyperlink{class_magazin_ad74a1c4296383bcc4c88504e55fea380}{datumAusgabe}}(initDatumAusgabe),\ \mbox{\hyperlink{class_magazin_a23770e643f16a871519eb32bf13d2adc}{sparte}}(initSparte)}
+\DoxyCodeLine{\Hypertarget{_magazin_8cpp_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{_magazin_8cpp_source_l00007}00007\ \}}
+\DoxyCodeLine{\Hypertarget{_magazin_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_magazin_8cpp_source_l00009}\mbox{\hyperlink{class_magazin_a1ebf98db1ed048d20819debc97d5d36d}{00009}}\ \mbox{\hyperlink{class_magazin_a1ebf98db1ed048d20819debc97d5d36d}{Magazin::\string~Magazin}}()\ \{\}}
+\DoxyCodeLine{\Hypertarget{_magazin_8cpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_magazin_8cpp_source_l00011}\mbox{\hyperlink{class_magazin_abca2107906d4e9918a5b4083ab564ba6}{00011}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_magazin_abca2107906d4e9918a5b4083ab564ba6}{Magazin::ausgabe}}()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{_magazin_8cpp_source_l00012}00012\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{_magazin_8cpp_source_l00013}00013\ \ \ \ \ \mbox{\hyperlink{class_medium_a4ef72a6165d29497d26d0825a0f3b486}{Medium::ausgabe}}();}
+\DoxyCodeLine{\Hypertarget{_magazin_8cpp_source_l00014}00014\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Erscheinungsdatum:\ "{}};}
+\DoxyCodeLine{\Hypertarget{_magazin_8cpp_source_l00015}00015\ \ \ \ \ \mbox{\hyperlink{class_magazin_ad74a1c4296383bcc4c88504e55fea380}{datumAusgabe}}.ausgabe(std::cout);\ \textcolor{comment}{//\ <-\/-\/\ Korrektur\ hier}}
+\DoxyCodeLine{\Hypertarget{_magazin_8cpp_source_l00016}00016\ \ \ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_magazin_8cpp_source_l00017}00017\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Sparte:\ "{}}\ <<\ \mbox{\hyperlink{class_magazin_a23770e643f16a871519eb32bf13d2adc}{sparte}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_magazin_8cpp_source_l00018}00018\ \}}
+\DoxyCodeLine{\Hypertarget{_magazin_8cpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_magazin_8cpp_source_l00020}\mbox{\hyperlink{class_magazin_af64fe3e3431aa4493e1b5d701696a9e1}{00020}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_magazin_af64fe3e3431aa4493e1b5d701696a9e1}{Magazin::ausleihen}}(\mbox{\hyperlink{class_person}{Person}}\ person,\ \mbox{\hyperlink{class_datum}{Datum}}\ ausleihdatum)}
+\DoxyCodeLine{\Hypertarget{_magazin_8cpp_source_l00021}00021\ \{}
+\DoxyCodeLine{\Hypertarget{_magazin_8cpp_source_l00022}00022\ \ \ \ \ \textcolor{comment}{//\ Prüfe,\ ob\ das\ Magazin\ die\ neueste\ Ausgabe\ ist}}
+\DoxyCodeLine{\Hypertarget{_magazin_8cpp_source_l00023}00023\ \ \ \ \ \textcolor{comment}{//\ Annahme:\ neueste\ Ausgabe\ =\ Ausleihmonat\ und\ Jahr\ gleich\ Erscheinungsmonat\ und\ Jahr}}
+\DoxyCodeLine{\Hypertarget{_magazin_8cpp_source_l00024}00024\ \ \ \ \ \textcolor{keywordflow}{if}\ (ausleihdatum.\mbox{\hyperlink{class_datum_aeac1260c34a9a7684fa14136a6bb73ec}{getMonat}}()\ ==\ \mbox{\hyperlink{class_magazin_ad74a1c4296383bcc4c88504e55fea380}{datumAusgabe}}.getMonat()\ \&\&}
+\DoxyCodeLine{\Hypertarget{_magazin_8cpp_source_l00025}00025\ \ \ \ \ \ \ \ \ ausleihdatum.\mbox{\hyperlink{class_datum_a0e49c77e603dbbe29fa2242f8de43eb2}{getJahr}}()\ ==\ \mbox{\hyperlink{class_magazin_ad74a1c4296383bcc4c88504e55fea380}{datumAusgabe}}.getJahr())}
+\DoxyCodeLine{\Hypertarget{_magazin_8cpp_source_l00026}00026\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_magazin_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Das\ Magazin\ ist\ die\ neueste\ Ausgabe\ und\ darf\ nicht\ ausgeliehen\ werden."{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{_magazin_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_magazin_8cpp_source_l00029}00029\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_magazin_8cpp_source_l00030}00030\ \ \ \ \ \textcolor{comment}{//\ Sonst\ Standardverhalten\ der\ Basisklasse}}
+\DoxyCodeLine{\Hypertarget{_magazin_8cpp_source_l00031}00031\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_medium_a98261c5da2a63906799f298cbbcd66b8}{Medium::ausleihen}}(person,\ ausleihdatum);}
+\DoxyCodeLine{\Hypertarget{_magazin_8cpp_source_l00032}00032\ \}}
+
+\end{DoxyCode}

@@ -95,13 +95,13 @@ int main()
             std::string matrikel;
             std::cout << "Matrikelnummer des zu löschenden Studenten: ";
             std::cin >> matrikel;
-            trim(matrikel); // <--- trimmen!
+            trim(matrikel);
 
             auto it = std::find_if(studenten.begin(), studenten.end(),
                                    [&matrikel](const Student &s)
                                    {
                                        std::string m = s.matrikelnummer;
-                                       trim(m); // <--- trimmen!
+                                       trim(m);
                                        return m == matrikel;
                                    });
 

@@ -1,0 +1,49 @@
+\doxysection{Datum.\+h}
+\hypertarget{_datum_8h_source}{}\label{_datum_8h_source}\index{src/Datum.h@{src/Datum.h}}
+\mbox{\hyperlink{_datum_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00007}00007\ \textcolor{preprocessor}{\#ifndef\ Datum\_H\_}}
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00008}00008\ \textcolor{preprocessor}{\#define\ Datum\_H\_}}
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00021}\mbox{\hyperlink{class_datum}{00021}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_datum_ae1880ae165f7a4aef90be6e8cfaa5ff5}{Datum}}}
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00022}00022\ \{}
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00023}00023\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00030}00030\ \ \ \ \ \mbox{\hyperlink{class_datum_ae1880ae165f7a4aef90be6e8cfaa5ff5}{Datum}}();}
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00040}00040\ \ \ \ \ \mbox{\hyperlink{class_datum_ae1880ae165f7a4aef90be6e8cfaa5ff5}{Datum}}(\textcolor{keywordtype}{int}\ initTag,\ \textcolor{keywordtype}{int}\ initMonat,\ \textcolor{keywordtype}{int}\ initJahr);}
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00045}00045\ \ \ \ \ \mbox{\hyperlink{class_datum_ac818754b1bf998712938d7062c4ad936}{\string~Datum}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00052}\mbox{\hyperlink{class_datum_a63da198694c52ad942beed1c94887f5c}{00052}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_datum_a63da198694c52ad942beed1c94887f5c}{getTag}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_datum_a7436715302138ec188825cb7693b8207}{tag}};\ \}}
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00053}\mbox{\hyperlink{class_datum_aeac1260c34a9a7684fa14136a6bb73ec}{00053}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_datum_aeac1260c34a9a7684fa14136a6bb73ec}{getMonat}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_datum_a7047b18c19aa1103d9b56dc06eb76018}{monat}};\ \}}
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00054}\mbox{\hyperlink{class_datum_a0e49c77e603dbbe29fa2242f8de43eb2}{00054}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_datum_a0e49c77e603dbbe29fa2242f8de43eb2}{getJahr}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_datum_a2f91cf40901d23e6944d49caaa123a42}{jahr}};\ \}}
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00061}00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_datum_a41c676d7d87f3382500ff3b92e81bbe4}{eingabe}}(std::istream\ \&in);}
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00068}00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_datum_acfcbb5c16efc6a23e7d6941405332bef}{ausgabe}}(std::ostream\ \&out)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00075}00075\ \ \ \ \ \mbox{\hyperlink{class_datum}{Datum}}\ \&\mbox{\hyperlink{class_datum_ae083121165ba9b060bab456f156ef4df}{operator=}}(\mbox{\hyperlink{class_datum}{Datum}}\ \&d);}
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00084}00084\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_datum_a8e9f8000e2869bacbf1cac80ac2ff7ee}{operator-\/}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_datum}{Datum}}\ d)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00093}00093\ \ \ \ \ \mbox{\hyperlink{class_datum}{Datum}}\ \mbox{\hyperlink{class_datum_ab580376d6838d4b3176606b061d7fe74}{operator+}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ anzahlTage)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00095}00095\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00096}\mbox{\hyperlink{class_datum_a7436715302138ec188825cb7693b8207}{00096}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_datum_a7436715302138ec188825cb7693b8207}{tag}};}
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00097}\mbox{\hyperlink{class_datum_a7047b18c19aa1103d9b56dc06eb76018}{00097}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_datum_a7047b18c19aa1103d9b56dc06eb76018}{monat}};}
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00098}\mbox{\hyperlink{class_datum_a2f91cf40901d23e6944d49caaa123a42}{00098}}\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_datum_a2f91cf40901d23e6944d49caaa123a42}{jahr}};}
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00103}00103\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_datum_aa361db6b6f0142699fe5c885b907f048}{tageMonat}}[12];}
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00104}00104\ \};}
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00124}00124\ std::istream\ \&\mbox{\hyperlink{_datum_8h_a592a2f3f79a3c03fa723b5fb70bbfe33}{operator>>}}(std::istream\ \&in,\ \mbox{\hyperlink{class_datum}{Datum}}\ \&d);}
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00125}00125\ }
+\DoxyCodeLine{\Hypertarget{_datum_8h_source_l00126}00126\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

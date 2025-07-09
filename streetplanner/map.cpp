@@ -12,7 +12,7 @@ void Map::addCity(City* city)
 
 bool Map::addStreet(Street* street)
 {
-    // Prüfen, ob beide Städte in der Map sind
+    // Nur hinzufügen, wenn beide Städte in der Map sind
     if (cities.contains(street->getCityA()) && cities.contains(street->getCityB())) {
         streets.append(street);
         qDebug() << "Straße hinzugefügt zwischen:" << street->getCityA()->getName() << "und" << street->getCityB()->getName();
