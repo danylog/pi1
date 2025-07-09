@@ -47,7 +47,7 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := Versuch0
+BUILD_ARTIFACT_NAME := Versuch07
 BUILD_ARTIFACT_EXTENSION :=
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
@@ -58,19 +58,19 @@ BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ART
 all: main-build
 
 # Main-build Target
-main-build: Versuch0
+main-build: Versuch07
 
 # Tool invocations
-Versuch0: $(OBJS) $(USER_OBJS) makefile $(OPTIONAL_TOOL_DEPS)
+Versuch07: $(OBJS) $(USER_OBJS) makefile $(OPTIONAL_TOOL_DEPS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MacOS X C++ Linker'
-	g++  -o "Versuch0" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++  -o "Versuch07" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) Versuch0
+	-$(RM) Versuch07
 	-@echo ' '
 
 .PHONY: all clean dependents main-build
